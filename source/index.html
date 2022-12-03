@@ -11,39 +11,38 @@
 
   <header class="main-header">
     <a class="main-header__link" href="index.html">
-      <img class="main-header__logo" src="img/logo.svg" alt="Логотип Седоны" width="185" height="96">
+      <img class="main-header__logo" width="185" height="96" src="img/logo.svg" alt="Логотип Седоны.">
     </a>
-    <nav class="navigation">
-      <button class="navigation__toogle button" type="button">
-        <span class="visually-hidden">
-          Открыть меню
-        </span>
-      </button>
-      <ul class="navigation__list">
-        <li class="navigation__item">
-          <a class="navigation__link" href="index.html">Главная</a>
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="index.html">Главная</a>
         </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="catalog.html">Фото и видео</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="catalog.html">Фото и видео</a>
         </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="form.html">Форма отзыва</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="form.html">Форма отзыва</a>
         </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="https://htmlacademy.ru">HTML Academy</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
         </li>
       </ul>
+      <button class="main-nav__toogle" type="button">
+        <span class="visually-hidden">Открыть/закрыть меню</span>
+      </button>
     </nav>
   </header>
 
-  <main class="main-index">
+  <main class="main-container">
 
     <h1 class="visually-hidden">Сайт города Седона</h1>
 
-    <section class="main-index__intro">
+    <section class="main-container__intro">
       <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
-      <img class="main-index__image" src="img/intro-text-index.svg" width="282" height="214"
-        alt="Добро пожаловать в Седону">
+      <div class="main-container__wrapper">
+        <img class="main-container__image" src="img/intro-text-index.svg" alt="Добро пожаловать в Седону.">
+      </div>
     </section>
 
     <section class="advantages">
@@ -54,51 +53,50 @@
       </header>
 
       <ul class="advantages__list">
-
-        <li class="advantages__item advantages__item--with-image">
+        <li class="advantages__item--with-image">
           <h3 class="advantages__title">Настоящий городок</h3>
-          <p class="advantages__text">— №1 —</p>
+          <p class="advantages__number">— №1 —</p>
           <p class="advantages__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
-          <img class="advantages__image" src="img/city.jpg" alt="Фото города" width="320" height="260">
+          <img class="advantages__image" src="img/photo-city.jpg" alt="Фото города.">
 
-          <ul class="advantages__list sublist">
-            <li class="sublist__item sublist__item--housing">
-              <h4 class="sublist__title">Жилье</h4>
-              <p class="sublist__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+          <ul class="advantages-sublist">
+            <li class="advantages-sublist__item--housing">
+              <h4 class="advantages-sublist__title">Жилье</h4>
+              <p class="advantages-sublist__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </li>
-            <li class="sublist__item sublist__item--food">
-              <h4 class="sublist__title">Еда</h4>
-              <p class="sublist__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            <li class="advantages-sublist__item--food">
+              <h4 class="advantages-sublist__title">Еда</h4>
+              <p class="advantages-sublist__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </li>
-            <li class="sublist__item sublist__item--souvenirs">
-              <h4 class="sublist__title">Сувениры</h4>
-              <p class="sublist__text">Не только китайского, но и местного производства!</p>
+            <li class="advantages-sublist__item--souvenirs">
+              <h4 class="advantages-sublist__title">Сувениры</h4>
+              <p class="advantages-sublist__text">Не только китайского, но и местного производства!</p>
             </li>
           </ul>
         </li>
 
-        <li class="advantages__item advantages__item--with-image">
+        <li class="advantages__item--with-image">
           <h3 class="advantages__title">Там есть мост дьявола</h3>
-          <p class="advantages__text">— №2 —</p>
+          <p class="advantages__number">— №2 —</p>
           <p class="advantages__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-          <img class="advantages__image" src="img/bridge.jpg" alt="Фото моста дьявола" width="320" height="260">
+          <img class="advantages__image" src="img/photo-bridge.jpg" alt="Фото моста дьявола.">
         </li>
 
         <li class="advantages__item">
           <h3 class="advantages__title">Небольшая площадь</h3>
-          <p class="advantages__text">— №3 —</p>
+          <p class="advantages__number">— №3 —</p>
           <p class="advantages__text">Все интересные места находятся очень близко</p>
         </li>
 
         <li class="advantages__item">
           <h3 class="advantages__title">Красивая дорога</h3>
-          <p class="advantages__text">— №4 —</p>
-          <p class="advantages__text">Eхать в Cедону из Лас-вегаса совсем не скучно</p>
+          <p class="advantages__number">— №4 —</p>
+          <p class="advantages__text">Eхать в Cедону из Лас-вегаса совсем не скучно!</p>
         </li>
 
         <li class="advantages__item">
           <h3 class="advantages__title">Мало туристов</h3>
-          <p class="advantages__text">— №5 —</p>
+          <p class="advantages__number">— №5 —</p>
           <p class="advantages__text">Большинство едет в гранд каньон и толпится там</p>
         </li>
 
@@ -114,7 +112,10 @@
 
     <section class="map">
       <h2 class="visually-hidden">Карта</h2>
-      <img class="map__image" src="img/map.jpg" alt="Карта" width="320" height="350">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.17731020665!2d-111.79513845!3d34.8543784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1670085124716!5m2!1sru!2sru"
+        width="100%" height="350" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </section>
   </main>
 
@@ -134,8 +135,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube button"
-            href="https://www.youtube.com/user/htmlacademyru">
+          <a class="social__link social__link--youtube button" href="https://www.youtube.com/user/htmlacademyru">
             <span class="visually-hidden">Ютуб</span>
           </a>
         </li>
@@ -143,7 +143,7 @@
     </section>
     <div class="main-footer__copyright copyright">
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <img class="copyright__icon" src="img/copyright.svg" alt="Логотип HTML Academy" width="128" height="34">
+        <img class="copyright__icon" src="img/copyright.svg" alt="Логотип HTML Academy.">
         <span class="visually-hidden">Cсылка на HTML Academy</span>
       </a>
     </div>
