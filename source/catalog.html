@@ -11,14 +11,9 @@
 
   <header class="main-header">
     <a class="main-header__link" href="index.html">
-      <img class="main-header__logo" src="img/logo.svg" alt="Логотип Седоны" width="185" height="96">
+      <img class="main-header__logo" width="185" height="96" src="img/logo.svg" alt="Логотип Седоны.">
     </a>
-    <nav class="main-nav">
-      <button class="main-nav__toogle" type="button">
-        <span class="visually-hidden">
-          Открыть меню
-        </span>
-      </button>
+    <nav class="main-nav visually-hidden">
       <ul class="main-nav__list">
         <li class="main-nav__item">
           <a class="main-nav__link" href="index.html">Главная</a>
@@ -34,6 +29,9 @@
         </li>
       </ul>
     </nav>
+    <button class="main-header__toogle main-header__toogle--open" type="button">
+      <span class="visually-hidden">Открыть/закрыть меню</span>
+    </button>
   </header>
 
   <main class="main-inner">
@@ -131,7 +129,7 @@
       </a>
     </div>
   </footer>
-
+  <script src="js/app.js" type="module"></script>
 </body>
 
 </html>
