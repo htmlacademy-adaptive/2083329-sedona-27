@@ -13,7 +13,7 @@
     <a class="main-header__link" href="index.html">
       <img class="main-header__logo" width="185" height="96" src="img/logo.svg" alt="Логотип Седоны.">
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav visually-hidden">
       <ul class="main-nav__list">
         <li class="main-nav__item">
           <a class="main-nav__link" href="index.html">Главная</a>
@@ -28,10 +28,10 @@
           <a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
         </li>
       </ul>
-      <button class="main-nav__toogle" type="button">
-        <span class="visually-hidden">Открыть/закрыть меню</span>
-      </button>
     </nav>
+    <button class="main-header__toogle main-header__toogle--open" type="button">
+      <span class="visually-hidden">Открыть/закрыть меню</span>
+    </button>
   </header>
 
   <main class="main-container">
@@ -68,7 +68,7 @@
               <h4 class="advantages-sublist__title">Еда</h4>
               <p class="advantages-sublist__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </li>
-            <li class="advantages-sublist__item--souvenirs">
+            <li class="advantages-sublist__item--gifts">
               <h4 class="advantages-sublist__title">Сувениры</h4>
               <p class="advantages-sublist__text">Не только китайского, но и местного производства!</p>
             </li>
@@ -148,7 +148,7 @@
       </a>
     </div>
   </footer>
-
+  <script src="js/main.js" type="module"></script>
 </body>
 
 </html>
