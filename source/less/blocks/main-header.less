@@ -2,16 +2,30 @@
   text-align: center;
   position: relative;
   z-index: 1;
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+  }
+}
+
+.main-header__link {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .main-header__toogle {
   position: absolute;
   top: 17px;
-  right: 17px;
+  right: 20px;
   width: 23px;
   height: 22px;
   border: 0;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .main-header__toogle--open {

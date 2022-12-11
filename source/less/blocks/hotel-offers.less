@@ -1,5 +1,9 @@
 .hotel-offers {
-  margin: 38px 18px 49px 18px;
+  padding: 38px 18px 49px 18px;
+
+  @media (min-width: @tablet-width) {
+    padding: 61px 20% 58px 20%;
+  }
 }
 
 .hotel-offers__title {
@@ -18,4 +22,6 @@
   padding-top: 16px;
   padding-bottom: 16px;
   text-decoration: none;
+  max-width: 458px;
+  margin: 0 auto;
 }
