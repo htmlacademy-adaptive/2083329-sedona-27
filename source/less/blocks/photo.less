@@ -1,3 +1,23 @@
+.photo {
+  text-align: left;
+
+  &:first-child {
+    width: 100%;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:not(:first-child) {
+      width: 50%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:not(:first-child) {
+      width: calc(100% / 3);
+    }
+  }
+}
+
 .photo__title {
   margin-top: 15px;
   margin-bottom: 0;

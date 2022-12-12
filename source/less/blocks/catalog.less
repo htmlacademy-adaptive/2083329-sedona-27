@@ -1,12 +1,29 @@
 .catalog {
   margin-left: 20px;
   margin-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .catalog__header {
-  text-align: center;
+  padding-top: 37px;
+  padding-bottom: 50px;
 }
 
 .catalog__title {
+  .reset-style;
   .font-settings(700; 18px; 26px);
+  margin-bottom: 34px;
+}
+
+.catalog__text {
+  .reset-style;
 }
