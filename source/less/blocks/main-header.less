@@ -1,13 +1,27 @@
 .main-header {
-  text-align: center;
   position: relative;
+  height: 276px;
+  display: flex;
   z-index: 1;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    height: 56px;
+  }
+}
+
+.main-header__link {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .main-header__toogle {
   position: absolute;
+  z-index: 2;
   top: 17px;
-  right: 17px;
+  right: 20px;
   width: 23px;
   height: 22px;
   border: 0;

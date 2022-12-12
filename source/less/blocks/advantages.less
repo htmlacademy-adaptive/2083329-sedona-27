@@ -1,50 +1,93 @@
-.advantages__list {
-  .reset-style;
+.advantages__header {
+  padding: 32px 30px 54px 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 47px 20% 55px 20%;
+  }
 }
 
-.advantages__header {
-  margin-left: 18px;
-  margin-right: 18px;
+.advantages__list {
+  .reset-list-style;
+  padding-bottom: 4px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .advantages__slogan {
-  margin-top: 32px;
-  margin-bottom: 35px;
+  .reset-style;
   .font-settings(700; 18px; 26px);
-}
-
-.advantages__item--with-image {
-  margin-top: 38px;
-  background-color: @blue;
-  color: @white;
-}
-
-.advantages__item {
-  padding-bottom: 24px;
-  background-color: @grey;
-  border-bottom: 1px solid @lightgray;
-}
-
-.advantages__title {
-  margin: 0;
-  padding: 33px 18px 11px 18px;
-  color: inherit;
+  margin-bottom: 35px;
 }
 
 .advantages__text {
-  margin: 0 18px 0 18px;
+  .reset-style;
+}
+
+.advantages__description--with-image {
+  padding: 36px 18px 40px 18px;
+
+  @media (min-width: @tablet-width) {
+    padding: 52px 33px 31px 33px;
+    width: calc(100% / 3);
+  }
+}
+
+.advantages__description {
+  padding: 24px 35px 23px 35px;
+}
+
+.advantages__title {
+  .reset-style;
+  .font-settings(700; 18px; 26px);
+  margin-bottom: 10px;
   color: inherit;
+}
+
+.advantages__item {
+  background-color: @grey;
+  border-bottom: 1px solid @lightgray;
+
+  @media (min-width: @tablet-width) {
+    width: calc(100% / 3);
+  }
 }
 
 .advantages__number {
-  margin: 0 18px 17px 18px;
+  .reset-style;
+  margin-bottom: 17px;
   color: inherit;
 }
 
+.advantages__item--with-image {
+  background-color: @blue;
+  color: @white;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+}
+
 .advantages__image {
-  margin-top: 37px;
-  display: block;
   width: 100%;
   height: auto;
+  display: block;
   object-fit: cover;
+
+  @media (min-width: 768px) {
+    width: calc((100% / 3) * 2);
+  }
+}
+
+.advantages__group {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.advantages__group--reverse {
+  flex-direction: row-reverse;
 }

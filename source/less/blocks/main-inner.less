@@ -1,12 +1,15 @@
-.main-inner {
-  position: relative;
-  top: -40px;
-  z-index: 0;
-}
-
 .main-inner__image-wrapper {
-  margin-bottom: 36px;
   padding: 62px 46px 67px 45px;
   text-align: center;
+  position: relative;
   background: url("../img/back-inner.jpg") @lightbrown center/cover no-repeat;
+
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/back-inner-tablet.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/back-inner-desktop.jpg");
+  }
 }
