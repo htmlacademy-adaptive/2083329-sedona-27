@@ -1,19 +1,19 @@
 .main-footer {
+  padding: 39px 18px 23px 18px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 36px 60px 36px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 36px 110px 45px 110px;
+  }
 }
 
 .main-footer__hashtag {
   .font-settings(700; 21px; 26px);
-}
-
-.main-footer__wrapper {
-  padding: 39px 18px 23px 18px;
-
-  @media (min-width: 768px) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 45px;
-    padding-left: 76px;
-  }
 }

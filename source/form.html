@@ -29,7 +29,7 @@
           </li>
         </ul>
       </nav>
-      <button class="main-header__toogle main-header__toogle--open" type="button">
+      <button class="main-header__toogle main-header__toogle--open visually-hidden" type="button">
         <span class="visually-hidden">Открыть/закрыть меню</span>
       </button>
     </header>
@@ -48,12 +48,11 @@
       <section class="feedback">
         <header class="feedback__header">
           <h2 class="feedback__title">Оставьте свой отзыв</h2>
-          <p class="feedback__text">Помогите нашим отелям стать лучше!  Оставьте отзыв о них, а также о
-            посещенных вами
-            достопримечательностях</p>
+          <p class="feedback__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, <br>а также о
+            посещенных вами достопримечательностях</p>
         </header>
 
-        <form class="feedback-form">
+        <form class="feedback-form form">
           <fieldset class="feedback-form__group">
             <legend class="feedback-form__title">Представьтесь:</legend>
             <ul class="feedback-form__list">
@@ -77,11 +76,13 @@
             <ul class="feedback-form__list">
               <li class="feedback-form__item input-text">
                 <label class="input-text__label" for="phone">Контактный телефон*</label>
-                <input class="input-text__input input-text__input--phone" type="text" id="phone" name="phone" placeholder="Введите телефон">
+                <input class="input-text__input input-text__input--phone" type="text" id="phone" name="phone"
+                  placeholder="Введите телефон">
               </li>
               <li class="feedback-form__item input-text">
                 <label class="input-text__label" for="email">Электронная почта*</label>
-                <input class="input-text__input input-text__input--email" type="text" id="email" name="email" placeholder="Введите e-mail">
+                <input class="input-text__input input-text__input--email" type="text" id="email" name="email"
+                  placeholder="Введите e-mail">
               </li>
             </ul>
           </fieldset>
@@ -107,7 +108,7 @@
           </fieldset>
 
           <fieldset class="feedback-form__group">
-            <legend class="feedback-form__title">Посещенные  достопримечательности:</legend>
+            <legend class="feedback-form__title">Посещенные достопримечательности:</legend>
             <ul class="feedback-form__list">
               <li class="feedback-form__item input-checkbox">
                 <input class="input-checkbox__input visually-hidden" type="checkbox" id="devil-bridge" name="sight"
@@ -134,7 +135,8 @@
 
           <fieldset class="feedback-form__group">
             <legend class="feedback-form__title">Опишите свои эмоции:</legend>
-            <textarea class="input-textarea" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
+            <textarea class="input-textarea" name="emotions"
+              placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
 
           <div class="feedback-form__button-wrapper">
@@ -147,40 +149,40 @@
     </main>
 
     <footer class="main-footer">
-      <p class="main-footer__hashtag">#VisitSedona</p>
-      <section class="main-footer__social social">
-        <h2 class="visually-hidden">Социальные сети</h2>
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte button" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Вконтакте</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--telegram button" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Телеграмм</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--youtube button" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Ютуб</span>
-            </a>
-          </li>
-        </ul>
-      </section>
-      <div class="main-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__icon" src="img/copyright.svg" alt="Логотип HTML Academy.">
-          <span class="visually-hidden">Cсылка на HTML Academy</span>
-        </a>
-      </div>
+        <p class="main-footer__hashtag">#VisitSedona</p>
+        <section class="main-footer__social social">
+          <h2 class="visually-hidden">Социальные сети</h2>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte button" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--telegram button" href="https://t.me/htmlacademy">
+                <span class="visually-hidden">Телеграмм</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube button" href="https://www.youtube.com/user/htmlacademyru">
+                <span class="visually-hidden">Ютуб</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <div class="main-footer__copyright copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="copyright__icon" src="img/copyright.svg" alt="Логотип HTML Academy.">
+            <span class="visually-hidden">Cсылка на HTML Academy</span>
+          </a>
+        </div>
     </footer>
 
     <!-- Модальное сообщение с ошибкой при отправке отзыва -->
     <section class="modal">
       <div class="modal__wrapper">
         <h2 class="modal__title">Что-то пошло не так!</h2>
-        <p class="modal__description">Проверьте поля, выделенные  красным, скорее всего вы  забыли их заполнить
+        <p class="modal__description">Проверьте поля, выделенные красным, <br> скорее всего вы забыли их заполнить
         </p>
         <button class="modal__button--error button" type="button">Ок</button>
       </div>
@@ -190,14 +192,13 @@
     <section class="modal">
       <div class="modal__wrapper">
         <h2 class="modal__title">Ваш отзыв отправлен!</h2>
-        <p class="modal__description">Спасибо за ваше участие, ваш  отзыв уже поступил к нам.  В ближайшее время
-          мы
-          опубликуем его на сайте</p>
+        <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. <br> В ближайшее время
+          мы опубликуем его на сайте</p>
         <button class="modal__button--success button" type="button">Закрыть окно</button>
       </div>
     </section>
-    <script src="js/main.js" type="module"></script>
-  </body>
-
+    <!-- <script src="js/main.js" type="module"></script> -->
   </div>
+</body>
+
 </html>

@@ -1,18 +1,23 @@
 .feedback {
-  margin: 36px 20px 0 20px;
+  padding: 36px 20px 36px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 64px 60px 64px 60px;
+  }
 }
 
 .feedback__header {
-  margin-bottom: 53px;
+  padding-bottom: 53px;
   text-align: center;
 }
 
 .feedback__title {
-  margin-bottom: 24px;
+  .reset-style;
   .font-settings(700; 18px; 26px);
+  padding-bottom: 24px;
 }
 
 .feedback__text {
-  margin: 0;
+  .reset-style;
 }
 
