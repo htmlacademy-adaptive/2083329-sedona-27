@@ -10,14 +10,17 @@
 
 <body class="page__body">
   <div class="page__container">
-    <header class="main-header">
+    <header class="main-header main-nav--nojs">
       <a class="main-header__link" href="index.html">
         <img class="main-header__logo" width="185" height="96" src="img/logo.svg" alt="Логотип Седоны.">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть/закрыть меню</span>
+        </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html">Главная</a>
+            <a class="main-nav__link  main-nav__link--active" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="catalog.html">Фото и видео</a>
@@ -30,9 +33,6 @@
           </li>
         </ul>
       </nav>
-      <button class="main-header__toogle main-header__toogle--open visually-hidden" type="button">
-        <span class="visually-hidden">Открыть/закрыть меню</span>
-      </button>
     </header>
 
     <main class="main-container">
@@ -49,19 +49,23 @@
       <section class="advantages">
         <header class="advantages__header">
           <h2 class="visually-hidden">Преимущества Седоны</h2>
-          <p class="advantages__slogan">Седона — небольшой городок в Аризоне, <br> заслуживающий большего!</p>
+          <p class="advantages__slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
           <p class="advantages__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </header>
 
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--with-image">
             <div class="advantages__group">
-              <div class="advantages__description--with-image">
+              <div class="advantages__wrapper">
                 <h3 class="advantages__title">Настоящий городок</h3>
                 <p class="advantages__number">— №1 —</p>
-                <p class="advantages__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
+                <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
               </div>
-              <img class="advantages__image" src="img/photo-city.jpg" alt="Фото города.">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/photo-city-desktop.jpg 1x, img/photo-city-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-city-tablet.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
+                <img class="advantages__image" src="img/photo-city.jpg" srcset="img/photo-city@2x.jpg 2x" alt="Фото города.">
+              </picture>
             </div>
 
             <ul class="advantages-sublist">
@@ -82,44 +86,43 @@
 
           <li class="advantages__item advantages__item--with-image">
             <div class="advantages__group advantages__group--reverse">
-              <div class="advantages__description--with-image">
+              <div class="advantages__wrapper">
                 <h3 class="advantages__title">Там есть мост дьявола</h3>
                 <p class="advantages__number">— №2 —</p>
-                <p class="advantages__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+                <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
               </div>
-              <img class="advantages__image" src="img/photo-bridge.jpg" alt="Фото моста дьявола.">
+
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/photo-bridge-desktop.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+                <img class="advantages__image" src="img/photo-bridge.jpg" srcset="img/photo-bridge@2x.jpg 2x" alt="Фото моста дьявола.">
+              </picture>
             </div>
           </li>
 
           <li class="advantages__item">
-            <div class="advantages__description">
               <h3 class="advantages__title">Небольшая площадь</h3>
               <p class="advantages__number">— №3 —</p>
-              <p class="advantages__text">Все интересные места находятся очень близко</p>
-            </div>
+              <p class="advantages__description">Все интересные места находятся очень близко</p>
           </li>
 
           <li class="advantages__item">
-            <div class="advantages__description">
               <h3 class="advantages__title">Красивая дорога</h3>
               <p class="advantages__number">— №4 —</p>
-              <p class="advantages__text">Eхать в Cедону из Лас-вегаса совсем не скучно!</p>
-            </div>
+              <p class="advantages__description">Eхать в Cедону из Лас-вегаса совсем не скучно!</p>
           </li>
 
           <li class="advantages__item">
-            <div class="advantages__description">
               <h3 class="advantages__title">Мало туристов</h3>
               <p class="advantages__number">— №5 —</p>
-              <p class="advantages__text">Большинство едет в гранд каньон и толпится там</p>
-            </div>
+              <p class="advantages__description">Большинство едет в гранд каньон и толпится там</p>
           </li>
         </ul>
       </section>
 
       <section class="hotel-offers">
         <h2 class="hotel-offers__title">Заинтересовались?</h2>
-        <p class="hotel-offers__text">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения
+        <p class="hotel-offers__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
           гостиниц в
           седоне</p>
         <a class="hotel-offers__link button" href="#">Найти гостиницу</a>
@@ -165,7 +168,7 @@
       </div>
   </footer>
   </div>
-  <!-- <script src="js/main.js" type="module"></script> -->
+  <script src="js/script.js" type="module"></script>
 </body>
 
 

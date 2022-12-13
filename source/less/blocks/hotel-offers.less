@@ -13,9 +13,15 @@
 }
 
 .hotel-offers__text {
+  margin: 0 auto;
   margin-top: 0;
   margin-bottom: 32px;
+  max-width: 262px;
   color: @lightblack;
+
+  @media (min-width: @tablet-width) {
+    max-width: 435px;
+  }
 }
 
 .hotel-offers__link {
