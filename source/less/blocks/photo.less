@@ -1,4 +1,7 @@
+// mobail
 .photo {
+  padding-top: 24px;
+  padding-bottom: 25px;
   text-align: left;
 
   &:first-child {
@@ -18,31 +21,60 @@
   }
 }
 
+.photo__description {
+  padding-top: 10px;
+}
+
 .photo__title {
-  margin-top: 15px;
-  margin-bottom: 0;
+  .reset-style;
+  .font-settings(700; 14px; 21px);
 }
 
 .photo__autor {
+  .reset-style;
   text-transform: none;
-  margin: 0;
+  margin-bottom: 16px;
 }
 
 .photo__like {
-  margin-top: 16px;
-  margin-bottom: 25px;
-  margin-left: 37px;
-  font-weight: 700;
+  .reset-style;
   position: relative;
+  padding-left: 37px;
+  font-weight: 700;
 
   &::before {
     content: url("../img/icon-like.svg");
     position: absolute;
-    left: -37px;
+    bottom: 0;
+    left: 0;
   }
 }
 
 .photo__image {
   width: 100%;
   height: auto;
+}
+
+// tablet
+@media (min-width: @tablet-width) {
+  .photo {
+    text-align: left;
+
+    &:first-child {
+      width: 100%;
+    }
+
+    &:not(:first-child) {
+      width: 50%;
+    }
+  }
+}
+
+// desktop
+@media (min-width: @desktop-width) {
+  .photo {
+    &:not(:first-child) {
+      width: calc(100% / 3);
+    }
+  }
 }

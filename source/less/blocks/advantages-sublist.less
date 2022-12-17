@@ -1,14 +1,10 @@
+// mobail
 .advantages-sublist {
   .reset-list-style;
-  padding: 30px 18px 15px 65px;
+  padding: 30px 18px 14px 65px;
   background-color: @white;
   text-align: start;
   color: @black;
-
-  @media (min-width: @tablet-width) {
-    display: flex;
-    padding: 158px 33px 60px 33px;
-  }
 }
 
 .advantages-sublist__title {
@@ -46,7 +42,6 @@
   }
 }
 
-
 .advantages-sublist__item--food {
   position: relative;
 
@@ -76,5 +71,13 @@
       left: 42%;
       top: -50px;
     }
+  }
+}
+
+// tablet
+@media (min-width: @tablet-width) {
+  .advantages-sublist {
+    display: flex;
+    padding: 158px 33px 60px 33px;
   }
 }

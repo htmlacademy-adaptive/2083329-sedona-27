@@ -1,13 +1,59 @@
+// mobail
 .video-content {
   margin: 0 auto;
+}
 
-  @media (min-width: @desktop-width) {
-    margin-left: 199px;
-    margin-right: 201px;
-  }
+.video-content__header {
+  padding-top: 21px;
+  padding-bottom: 37px;
 }
 
 .video-content__image {
   width: 100%;
   height: auto;
+}
+
+.video-content__slogan {
+  .reset-style;
+  max-width: 266px;
+  margin: 0 auto;
+}
+
+.video-content__title {
+  .reset-style;
+  .font-settings(700; 18px; 26px);
+  margin-bottom: 26px;
+}
+
+.video-content__wrapper {
+  position: relative;
+
+  ::before {
+    content: "";
+    width: 48px;
+    height: 54px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    z-index: 3;
+    background: url("../img/icon-play.svg") no-repeat;
+  }
+}
+
+// tablet
+@media (min-width: @tablet-width) {
+  .video-content__slogan {
+    max-width: 445px;
+  }
+}
+
+// desktop
+@media (min-width: @desktop-width) {
+  .video-content {
+    margin-left: 199px;
+    margin-right: 201px;
+  }
 }

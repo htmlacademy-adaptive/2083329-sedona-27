@@ -1,13 +1,4 @@
-.input-radio {
-  @media (min-width: @tablet-width) {
-    width: 50%;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: calc(100% / 3);
-  }
-}
-
+// mobail
 .input-radio__label {
   min-height: 46px;
   position: relative;
@@ -45,4 +36,18 @@
 
 .input-radio__input:checked + .input-radio__label::after {
   display: block;
+}
+
+// tablet
+@media (min-width: @tablet-width) {
+  .input-radio {
+    width: 50%;
+  }
+}
+
+// desktop
+@media (min-width: @desktop-width) {
+  .input-radio {
+    width: calc(100% / 3);
+  }
 }

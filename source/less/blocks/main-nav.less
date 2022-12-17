@@ -1,9 +1,23 @@
+// mobail
 .main-nav {
   width: 100%;
-  min-height: 56px;
-  position: absolute;
-  top: 0;
-  left: 0;
+  height: 56px;
+}
+
+.main-nav__list {
+  .reset-list-style;
+  .font-settings(700; 18px; 26px);
+  background-color: @blue;
+  color: @white;
+  position: relative;
+}
+
+.main-nav__link {
+  padding-top: 17px;
+  padding-bottom: 12px;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .main-nav__toggle {
@@ -31,38 +45,10 @@
   background: url("../img/icon-close-menu.svg") center no-repeat @blue;
 }
 
-.main-nav__list {
-  .reset-list-style;
-  .font-settings(700; 18px; 26px);
-  background-color: @blue;
-  color: @white;
-  position: relative;
-}
-
-.main-nav__link {
-  display: block;
-  padding-top: 17px;
-  padding-bottom: 12px;
-  text-decoration: none;
-  color: inherit;
-}
-
+// only mobail
 @media (max-width: @mobile-width-only) {
-  .main-nav {
+  .main-nav--opened {
     z-index: 3;
-    position: absolute;
-  }
-
-  .main-nav--opened .main-nav__list::after,
-  .main-nav--nojs .main-nav__list::after {
-    content: "";
-    position: absolute;
-    top: 220px;
-    left: 0;
-    z-index: 10;
-    height: 7px;
-    width: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
   }
 
   .main-nav__item {
@@ -83,6 +69,7 @@
     position: static;
     margin-top: 95px;
     display: block;
+    height: auto;
   }
 
   .main-nav--nojs .main-nav__toggle {
@@ -92,8 +79,21 @@
   .main-nav--nojs .main-nav__item {
     display: block;
   }
+
+  .main-nav--opened .main-nav__list::after,
+  .main-nav--nojs .main-nav__list::after {
+    content: "";
+    position: absolute;
+    top: 220px;
+    left: 0;
+    z-index: 10;
+    height: 7px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+  }
 }
 
+// tablet
 @media (min-width: @tablet-width) {
   .main-nav__link--active {
     color: @brown;
@@ -101,18 +101,19 @@
 
   .main-nav__list {
     .font-settings(700; 14px; 21px);
-    display: flex;
-    justify-content: center;
     background-color: @white;
     color: @black;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
   }
 
   .main-nav__item {
-    width: 20%;
-    box-shadow: none;
+    &:nth-child(4n+3) {
+      grid-column: 4/5;
+    }
 
-    &:nth-child(4n+2) {
-      margin-right: 20%;
+    &:nth-child(4n+4) {
+      grid-column: 5/6;
     }
   }
 
@@ -121,6 +122,7 @@
   }
 }
 
+// desktop
 @media (min-width: @desktop-width) {
   .main-nav__list {
     max-width: @desktop-width;

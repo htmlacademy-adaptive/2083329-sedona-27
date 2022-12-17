@@ -1,9 +1,6 @@
+// mobile
 .feedback {
   padding: 36px 20px 36px 20px;
-
-  @media (min-width: @tablet-width) {
-    padding: 64px 60px 64px 60px;
-  }
 }
 
 .feedback__header {
@@ -19,4 +16,17 @@
 
 .feedback__text {
   .reset-style;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+// tablet
+@media (min-width: @tablet-width) {
+  .feedback {
+    padding: 64px 60px 64px 60px;
+  }
+
+  .feedback__text {
+    max-width: 435px;
+  }
 }

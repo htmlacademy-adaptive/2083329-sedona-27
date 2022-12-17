@@ -1,9 +1,21 @@
 .button {
+  .font-settings(700; 21px; 26px);
+  font-family: inherit;
   display: block;
   background-color: @blue;
   border: none;
   text-transform: uppercase;
   color: @white;
-  font-family: inherit;
-  .font-settings(700; 21px; 26px);
+  opacity: 1;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: @darkblue;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    opacity: 0.7;
+  }
 }
