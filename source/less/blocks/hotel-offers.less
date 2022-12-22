@@ -25,13 +25,27 @@
   max-width: 458px;
 }
 
+// only mobail
+@media (max-width: @mobile-width-only) {
+  .hotel-offers__text br {
+    display: none;
+  }
+}
+
+
 // tablet
 @media (min-width: @tablet-width) {
+  .hotel-offers__title {
+    .font-settings(700; 30px; 26px);
+    margin-bottom: 32px;
+  }
+
   .hotel-offers__text {
     max-width: 435px;
+    margin-bottom: 41px;
   }
 
   .hotel-offers {
-    padding: 61px 20% 58px 20%;
+    padding: 57px 20% 58px 20%;
   }
 }

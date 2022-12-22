@@ -38,11 +38,11 @@
 }
 
 .main-nav--closed .main-nav__toggle {
-  background: url("../img/icon-open-menu.svg") center no-repeat @white;
+  background: url("../img/icon-open-menu.svg") center no-repeat transparent;
 }
 
 .main-nav--opened .main-nav__toggle {
-  background: url("../img/icon-close-menu.svg") center no-repeat @blue;
+  background: url("../img/icon-close-menu.svg") center no-repeat transparent;
 }
 
 // only mobail
@@ -58,6 +58,16 @@
 
     &:not(:first-child) {
       border-top: 1px solid #98bfde;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: @darkblue;
+    }
+
+    &:active {
+      background-color: #5496bd;
+      color: rgba(255, 255, 255, 0.3);
     }
   }
 
@@ -95,8 +105,22 @@
 
 // tablet
 @media (min-width: @tablet-width) {
-  .main-nav__link--active {
-    color: @brown;
+  .main-nav__link {
+    padding-top: 19px;
+    padding-bottom: 16px;
+
+    &:hover,
+    &:focus {
+      color: @blue;
+    }
+
+    &:active {
+      color: #b3b3b3;
+    }
+  }
+
+  .main-nav__link--current {
+    color: #766357;
   }
 
   .main-nav__list {

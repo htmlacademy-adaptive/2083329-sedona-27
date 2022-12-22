@@ -1,17 +1,13 @@
 // mobile
-.feedback {
-  padding: 36px 20px 36px 20px;
-}
-
 .feedback__header {
-  padding-bottom: 53px;
+  padding: 38px 20px 27px 20px;
   text-align: center;
 }
 
 .feedback__title {
   .reset-style;
   .font-settings(700; 18px; 26px);
-  padding-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .feedback__text {
@@ -22,8 +18,13 @@
 
 // tablet
 @media (min-width: @tablet-width) {
-  .feedback {
-    padding: 64px 60px 64px 60px;
+  .feedback__header {
+    padding: 64px 60px 32px 60px;
+  }
+
+  .feedback__title {
+    .font-settings(700; 30px; 26px);
+    margin-bottom: 23px;
   }
 
   .feedback__text {

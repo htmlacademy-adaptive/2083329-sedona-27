@@ -1,11 +1,17 @@
 // mobail
+.input-radio {
+  &:not(:last-child) {
+    margin-bottom: 18px;
+  }
+}
+
 .input-radio__label {
-  min-height: 46px;
-  position: relative;
-  display: inline-block;
+  .font-settings(700; 18px; 26px);
+  min-height: 35px;
   padding-left: 63px;
   padding-top: 11px;
-  .font-settings(700; 18px; 26px);
+  position: relative;
+  display: inline-block;
   text-transform: none;
   cursor: pointer;
 
@@ -42,6 +48,12 @@
 @media (min-width: @tablet-width) {
   .input-radio {
     width: 50%;
+    box-sizing: border-box;
+    padding-left: 35px;
+
+    &:nth-child(2n) {
+      padding-left: 7px;
+    }
   }
 }
 

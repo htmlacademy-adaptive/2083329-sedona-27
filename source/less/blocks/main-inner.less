@@ -4,7 +4,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: url("../img/back-inner.jpg") @lightbrown center/cover no-repeat;
+  background: url("../img/back-inner.jpg") @lightbrown bottom/cover  no-repeat;
 
   &::after {
     content: "";
@@ -22,7 +22,14 @@
 //tablet
 @media (min-width: @tablet-width) {
   .main-inner__image-wrapper {
+    padding-top: 95px;
+    padding-bottom: 111px;
     background-image: url("../img/back-inner-tablet.jpg");
+  }
+
+  .main-inner__image {
+    width: 460px;
+    height: 78px;
   }
 }
 

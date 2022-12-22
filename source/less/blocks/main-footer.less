@@ -1,21 +1,31 @@
 // mobaile
 .main-footer {
-  padding: 33px 18px 23px 18px;
+  padding: 23px 18px;
   text-align: center;
 }
 
 .main-footer__hashtag {
   .reset-style;
   .font-settings(700; 21px; 26px);
+  padding-top: 21px;
+  padding-bottom: 21px;
 }
 
 // tablet
 @media (min-width: @tablet-width) {
   .main-footer {
-    padding: 36px 60px 36px 60px;
+    padding: 22px 66px 22px 61px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+  }
+
+  .main-footer__social {
+    padding-left: 22px;
+    padding-top: 8px;
+  }
+
+  .main-footer__copyright {
+    padding-top: 6px;
   }
 }
 

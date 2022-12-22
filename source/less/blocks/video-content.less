@@ -1,22 +1,24 @@
 // mobail
 .video-content {
+  padding: 16px 20px 0 20px;
   margin: 0 auto;
 }
 
 .video-content__header {
-  padding-top: 21px;
-  padding-bottom: 37px;
+  padding-bottom: 40px;
 }
 
 .video-content__image {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .video-content__slogan {
   .reset-style;
   max-width: 266px;
   margin: 0 auto;
+  color: @lightblack;
 }
 
 .video-content__title {
@@ -27,8 +29,9 @@
 
 .video-content__wrapper {
   position: relative;
+  opacity: 1;
 
-  ::before {
+  ::after {
     content: "";
     width: 48px;
     height: 54px;
@@ -38,15 +41,33 @@
     right: 0;
     margin: auto;
     position: absolute;
-    z-index: 3;
+    cursor: pointer;
     background: url("../img/icon-play.svg") no-repeat;
+    opacity: 0.5;
+  }
+
+  &:hover::after {
+    opacity: 0.3;
   }
 }
 
 // tablet
 @media (min-width: @tablet-width) {
+  .video-content {
+    padding: 36px 60px 46px 60px;
+  }
+
   .video-content__slogan {
     max-width: 445px;
+  }
+
+  .video-content__title {
+    font-size: 30px;
+    margin-bottom: 32px;
+  }
+
+  .video-content__header {
+    padding-bottom: 89px;
   }
 }
 
