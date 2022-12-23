@@ -1,37 +1,46 @@
 // mobaile
 .main-footer {
-  padding: 23px 18px;
-  text-align: center;
+  padding: 7px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-footer__hashtag {
   .reset-style;
   .font-settings(700; 21px; 26px);
-  padding-top: 21px;
-  padding-bottom: 21px;
+  padding: 21px 0;
+}
+
+.main-footer__social {
+  padding: 12px 0;
+}
+
+.main-footer__copyright {
+  padding: 28px 0;
 }
 
 // tablet
 @media (min-width: @tablet-width) {
   .main-footer {
-    padding: 22px 66px 22px 61px;
-    display: flex;
+    padding: 22px 60px;
+    flex-direction: row;
     justify-content: space-between;
   }
 
   .main-footer__social {
-    padding-left: 22px;
-    padding-top: 8px;
+    padding: 0 8px 4px 0;
   }
 
   .main-footer__copyright {
-    padding-top: 6px;
+    padding: 0;
   }
 }
 
 //desktop
 @media (min-width: @desktop-width) {
   .main-footer {
-    padding: 36px 110px 45px 110px;
+    padding: 36px 120px 45px 120px;
   }
 }
