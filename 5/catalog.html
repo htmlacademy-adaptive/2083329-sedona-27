@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/style.css">
+  <base href="https://htmlacademy-adaptive.github.io/2083329-sedona-27/5/">
+</head>
+
+<body class="page__body">
+  <div class="page__container">
+
+    <header class="main-header main-header--nojs">
+      <a class="main-header__logo" href="index.html">
+        <img class="main-header__image" width="185" height="96" src="img/logo.svg" alt="Логотип Седоны.">
+      </a>
+      <nav class="main-nav main-nav--closed">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть/закрыть меню</span>
+        </button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link  main-nav__link--active" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link  main-nav__link--current" href="catalog.html">Фото и видео</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Форма отзыва</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-inner">
+
+      <h1 class="visually-hidden">Публикации фото и видео</h1>
+
+      <section class="main-inner__intro">
+        <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
+        <div class="main-inner__image-wrapper">
+          <img class="main-inner__image" src="img/intro-text-inner.svg" alt="Добро пожаловать в Седону">
+        </div>
+      </section>
+
+      <section class="catalog">
+        <header class="catalog__header">
+          <h2 class="catalog__title">Фото и видео</h2>
+          <p class="catalog__slogan">Не можете решиться на путешествие из-за курса?<br> Фотографии помогут вам забыть
+            о политике и экономике.</p>
+        </header>
+
+        <section class="photo-content">
+          <ul class="photo-content__list">
+            <li class="photo-content__item photo">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/road-desktop.jpg 1x, img/road-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/road-tablet.jpg 1x, img/road-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/road.jpg" srcset="img/road@2x.jpg 2x" alt="Фото дороги на закате.">
+              </picture>
+              <div class="photo__info">
+                <div class="photo__description">
+                  <h3 class="photo__title">Неродные просторы</h3>
+                  <p class="photo__autor">Автор фото: Борис</p>
+                </div>
+                <div class="photo__like">
+                  <svg class="photo__like-icon" width="23" height="21" viewBox="0 0 23 21" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.3"
+                      d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
+                      fill="black" />
+                  </svg>
+                  <p class="photo__like-count">1350</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="photo-content__item photo">
+              <picture>
+                <source media="(min-width: 1280px)"
+                  srcset="img/vegetation-desktop.jpg 1x, img/vegetation-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/vegetation-tablet.jpg 1x, img/vegetation-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/vegetation.jpg" srcset="img/vegetation@2x.jpg 2x"
+                  alt="Фото местной растительности.">
+              </picture>
+              <div class="photo__info">
+                <div class="photo__description">
+                  <h3 class="photo__title">Местная растительность</h3>
+                  <p class="photo__autor">Автор фото: Сергей</p>
+                </div>
+                <div class="photo__like">
+                  <svg class="photo__like-icon" width="23" height="21" viewBox="0 0 23 21" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.3"
+                      d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
+                      fill="black" />
+                  </svg>
+                  <p class="photo__like-count">143</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="photo-content__item photo">
+              <picture>
+                <source media="(min-width: 1280px)"
+                  srcset="img/road-in-forest-desktop.jpg 1x, img/road-in-forest-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/road-in-forest-tablet.jpg 1x, img/road-in-forest-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/road-in-forest.jpg" srcset="img/road-in-forest@2x.jpg 2x"
+                  alt="Фото дороги в лесу.">
+              </picture>
+              <div class="photo__info">
+                <div class="photo__description">
+                  <h3 class="photo__title">Дорога на север</h3>
+                  <p class="photo__autor">Автор фото: Петр</p>
+                </div>
+                <div class="photo__like">
+                  <svg class="photo__like-icon" width="23" height="21" viewBox="0 0 23 21" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.3"
+                      d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
+                      fill="black" />
+                  </svg>
+                  <p class="photo__like-count">96</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="photo-content__item photo">
+              <picture>
+                <source media="(min-width: 1280px)"
+                  srcset="img/devil-bridge-desktop.jpg 1x, img/devil-bridge-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/devil-bridge-tablet.jpg 1x, img/devil-bridge-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/devil-bridge.jpg" srcset="img/devil-bridge@2x.jpg 2x"
+                  alt="Фото моста дьявола.">
+              </picture>
+              <div class="photo__info">
+                <div class="photo__description">
+                  <h3 class="photo__title">Мост дьявола</h3>
+                  <p class="photo__autor">Автор фото: Антон</p>
+                </div>
+                <div class="photo__like">
+                  <svg class="photo__like-icon" width="23" height="21" viewBox="0 0 23 21" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.3"
+                      d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
+                      fill="black" />
+                  </svg>
+                  <p class="photo__like-count">254</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="video-content">
+          <h2 class="visually-hidden">Видеопрезентация</h2>
+          <header class="video-content__header">
+            <p class="video-content__title">Все еще сомневаетесь?</p>
+            <p class="video-content__slogan">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
+              очередной раз!</p>
+          </header>
+          <div class="video-content__wrapper">
+            <picture>
+              <source media="(min-width: 1280px)"
+                srcset="img/video-frame-desktop.jpg 1x, img/video-frame-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/video-frame-tablet.jpg 1x, img/video-frame-tablet@2x.jpg 2x">
+              <img class="video-content__image" src="img/video-frame.jpg" srcset="img/video-frame@2x.jpg 2x"
+                alt="Начальный кадр видеопрезентации.">
+            </picture>
+            <svg class="video-content__play-icon" width="48" height="54" viewBox="0 0 48 54" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M48 27L0 54L2.42273e-06 0L48 27Z" fill="white" fill-opacity="0.7" />
+            </svg>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <p class="main-footer__hashtag">#VisitSedona</p>
+      <section class="main-footer__social social">
+        <h2 class="visually-hidden">Социальные сети</h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte button" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--telegram button" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">Телеграмм</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube button" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">Ютуб</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <div class="main-footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="copyright__text">Разработано</span>
+          <svg width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z"
+              fill="black" />
+          </svg>
+          <span class="visually-hidden">Cсылка на HTML Academy</span>
+        </a>
+      </div>
+    </footer>
+
+    <script src="js/script.js" type="module"></script>
+  </div>
+</body>
+
+</html>
