@@ -6,30 +6,33 @@
 .feedback-form__button {
   width: 100%;
   max-width: 324px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 17px;
+  padding-bottom: 15px;
   margin: 0 auto;
 }
 
 .feedback-form__title {
   .reset-style;
   .font-settings(700; 18px; 26px);
-  margin-bottom: 20px;
+  width: 100%;
+  padding-top: 25px;
+  margin: 0 auto;
+  //max-width: 239px;
 }
 
 .feedback-form__group {
   .reset-style;
-  padding: 24px 20px 13px 20px;
+  padding: 19px 20px 25px 20px;
   border: none;
-  border-top: 1px solid #e5e5e5;
+  box-sizing: border-box;
 }
 
 .feedback-form__group--name {
-  padding-bottom: 40px;
+  padding-bottom: 24px;
 }
 
 .feedback-form__group--contact {
-  padding-bottom: 33px;
+  padding-bottom: 19px;
 }
 
 .feedback-form__list {
@@ -42,7 +45,7 @@
 }
 
 .feedback-form__button-wrapper {
-  padding: 38px 20px 27px 20px;
+  padding: 25px 20px 21px 20px;
   box-sizing: border-box;
   width: 100%;
   max-width: 768px;
@@ -54,13 +57,34 @@
   .font-settings(400; 12px; 21px);
 }
 
+// mobail only
+@media (max-width: @mobile-width-only) {
+  .feedback-form__group {
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #e5e5e5;
+      position: absolute;
+      top: -52px;
+      left: 0;
+    }
+  }
+
+  .feedback-form__button {
+    margin-bottom: 3px;
+  }
+}
+
 // tablet
 @media (min-width: @tablet-width) {
   .feedback-form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 26px 60px 0 60px;
+    padding: 47px 60px 0 60px;
     box-sizing: border-box;
   }
 
@@ -71,7 +95,7 @@
 
   .feedback-form__group {
     padding: 0;
-    margin-top: 48px;
+    margin-bottom: 25px;
     box-sizing: border-box;
     width: 50%;
     border: none;
@@ -88,6 +112,7 @@
 
   .feedback-form__group--name {
     border-right: 1px solid #dbdbdb;
+    margin-bottom: 23px;
   }
 
   .feedback-form__group--name .feedback-form__item {
@@ -100,12 +125,34 @@
 
   .feedback-form__title {
     .font-settings(700; 21px; 26px);
-    margin: 0 auto;
-    max-width: 400px;
-    margin-bottom: 27px;
+    padding-bottom: 25px;
+    //max-width: 400px;
+  }
+
+  .feedback-form__title--with-decor {
+    position: relative;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      background-color: #dbdbdb;
+      top: 50%;
+      width: 19%;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
   }
 
   .feedback-form__button-wrapper {
+    margin: 0 auto;
     padding: 43px 0 70px 0;
     display: flex;
     justify-content: space-between;
@@ -119,5 +166,13 @@
   .feedback-form__text {
     .font-settings(400; 14px; 21px);
     padding-top: 8px;
+  }
+}
+
+// desktop
+@media (min-width: @desktop-width) {
+  .feedback-form {
+    padding-left: 120px;
+    padding-right: 120px;
   }
 }

@@ -1,24 +1,16 @@
 .input-checkbox {
   &:not(:last-child) {
-    margin-bottom: 5px;
-  }
-
-  @media (min-width: @tablet-width) {
-    width: 50%;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 25%;
+    margin-bottom: 15px;
   }
 }
 
 .input-checkbox__label {
   .font-settings(700; 18px; 26px);
   padding-left: 63px;
-  // padding-top: 11px;
   min-height: 46px;
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   text-transform: none;
   cursor: pointer;
 
@@ -38,12 +30,26 @@
     width: 22px;
     height: 16px;
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 13px;
+    left: 12px;
     display: none;
   }
 }
 
 .input-checkbox__input:checked + .input-checkbox__label::after {
   display: block;
+}
+
+// tablet
+@media (min-width: @tablet-width) {
+  .input-checkbox {
+    width: 50%;
+  }
+}
+
+// desktop
+@media (min-width: @desktop-width) {
+  .input-checkbox {
+    width: 25%;
+  }
 }
