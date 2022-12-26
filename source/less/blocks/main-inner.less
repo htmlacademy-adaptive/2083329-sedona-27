@@ -1,15 +1,41 @@
+// mobail
 .main-inner__image-wrapper {
-  padding: 62px 46px 67px 45px;
+  padding: 51px 20px 62px 21px;
   text-align: center;
   position: relative;
-  background: url("../img/back-inner.jpg") @lightbrown center/cover no-repeat;
+  overflow: hidden;
+  background: url("../img/back-inner.jpg") @lightbrown bottom/cover  no-repeat;
 
+  &::after {
+    content: "";
+    width: 1200px;
+    height: 57px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    background: url("../img/decor.svg") no-repeat;
+  }
+}
 
-  @media (min-width: @tablet-width) {
+//tablet
+@media (min-width: @tablet-width) {
+  .main-inner__image-wrapper {
+    padding: 95px 60px 111px 61px;
     background-image: url("../img/back-inner-tablet.jpg");
   }
 
-  @media (min-width: @desktop-width) {
+  .main-inner__image {
+    width: 460px;
+    height: 80px;
+  }
+}
+
+//desktop
+@media (min-width: @desktop-width) {
+  .main-inner__image-wrapper {
+    padding: 101px 65px 114px 61px;
     background-image: url("../img/back-inner-desktop.jpg");
   }
 }

@@ -1,6 +1,7 @@
 .input-text {
   display: flex;
   flex-direction: column;
+  margin-bottom: 16px;
 }
 
 .input-text__label {
@@ -10,10 +11,23 @@
 }
 
 .input-text__input {
-  padding: 16px;
-  margin-bottom: 8px;
-  background-color: @grey;
+  .font-settings(700; 16px; 30px);
+  width: 100%;
+  padding: 16px 16px 12px 15px;
+  box-sizing: border-box;
   border: none;
   text-transform: none;
-  .font-settings(700; 18px; 26px);
+  background-color: @lightgray;
+  background-repeat: no-repeat;
+  background-position: right 20px center, right center;
+}
+
+.input-text__input--phone {
+  background-image: url("../img/icon-phone.svg"), linear-gradient(to left, #e6e6e6 58px, transparent 58px);
+  padding-right: 62px;
+}
+
+.input-text__input--email {
+  background-image: url("../img/icon-email.svg"), linear-gradient(to left, #e6e6e6 58px, transparent 58px);
+  padding-right: 62px;
 }

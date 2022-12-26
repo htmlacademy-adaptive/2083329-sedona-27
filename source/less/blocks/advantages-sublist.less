@@ -1,14 +1,10 @@
+// mobail
 .advantages-sublist {
   .reset-list-style;
-  padding: 30px 18px 15px 65px;
+  padding: 33px 18px 11px 18px;
   background-color: @white;
   text-align: start;
   color: @black;
-
-  @media (min-width: @tablet-width) {
-    display: flex;
-    padding: 158px 33px 60px 33px;
-  }
 }
 
 .advantages-sublist__title {
@@ -23,58 +19,126 @@
 }
 
 .advantages-sublist__item {
+  padding-left: 47px;
   margin-bottom: 33px;
+  position: relative;
 
-  @media (min-width: 768px) {
-    text-align: center;
+  &::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    top: -9px;
+    left: 0;
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
 .advantages-sublist__item--housing {
-  position: relative;
-
   &::before {
-    content: url("../img/icon-house.svg");
-    position: absolute;
-    left: -46px;
-    top: -8px;
-
-    @media (min-width: 768px) {
-      left: 42%;
-      top: -50px;
-    }
+    background-image: url("../img/icon-house.svg");
   }
 }
 
-
 .advantages-sublist__item--food {
-  position: relative;
-
   &::before {
-    content: url("../img/icon-food.svg");
-    position: absolute;
-    left: -46px;
-    top: -8px;
-
-    @media (min-width: 768px) {
-      left: 42%;
-      top: -50px;
-    }
+    background-image: url("../img/icon-food.svg");
   }
 }
 
 .advantages-sublist__item--gifts {
-  position: relative;
-
   &::before {
-    content: url("../img/icon-gift.svg");
-    position: absolute;
-    left: -46px;
-    top: -8px;
+    background-image: url("../img/icon-gift.svg");
+  }
+}
 
-    @media (min-width: 768px) {
-      left: 42%;
-      top: -50px;
+// tablet
+@media (min-width: @tablet-width) {
+  .advantages-sublist {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .advantages-sublist__item {
+    .vertical-flex;
+    width: calc(100% / 3);
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 0;
+    min-height: 331px;
+    padding: 118px 20px 20px 20px;
+
+    &::before {
+      left: 50%;
+      top: 57px;
+      transform: translateX(-50%);
+    }
+  }
+
+  .advantages-sublist__item--housing {
+    &::before {
+      width: 72px;
+      height: 77px;
+    }
+  }
+
+  .advantages-sublist__item--food {
+    &::before {
+      width: 81px;
+      height: 68px;
+    }
+  }
+
+  .advantages-sublist__item--gifts {
+    &::before {
+      width: 67px;
+      height: 75px;
+    }
+  }
+
+  .advantages-sublist__title {
+    .font-settings(700; 21px; 26px);
+    margin-bottom: 22px;
+  }
+
+  .advantages-sublist__text {
+    max-width: 190px;
+    margin: 0 auto;
+  }
+}
+
+//desktop
+@media (min-width: @desktop-width) {
+  .advantages-sublist__item {
+    min-height: 331px;
+  }
+
+  .advantages-sublist__text {
+    max-width: 261px;
+  }
+
+  .advantages-sublist__item--housing {
+    &::before {
+      width: 80px;
+      height: 73px;
+    }
+  }
+
+  .advantages-sublist__item--food {
+    &::before {
+      width: 74px;
+      height: 69px;
+    }
+  }
+
+  .advantages-sublist__item--gifts {
+    &::before {
+      width: 78px;
+      height: 76px;
     }
   }
 }

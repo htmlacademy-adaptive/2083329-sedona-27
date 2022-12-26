@@ -1,27 +1,63 @@
+// mobail
 .hotel-offers {
-  padding: 38px 18px 49px 18px;
-
-  @media (min-width: @tablet-width) {
-    padding: 61px 20% 58px 20%;
-  }
+  padding: 37px 18px 49px 18px;
 }
 
 .hotel-offers__title {
-  margin-top: 0;
-  margin-bottom: 28px;
+  .reset-style;
   .font-settings(700; 21px; 26px);
+  margin-bottom: 20px;
 }
 
 .hotel-offers__text {
-  margin-top: 0;
+  .reset-style;
+  margin: 0 auto;
   margin-bottom: 32px;
+  max-width: 262px;
   color: @lightblack;
 }
 
 .hotel-offers__link {
-  padding-top: 16px;
+  margin: 0 auto;
+  padding-top: 17px;
   padding-bottom: 16px;
   text-decoration: none;
   max-width: 458px;
-  margin: 0 auto;
+}
+
+// only mobail
+@media (max-width: @mobile-width-only) {
+  .hotel-offers__text br {
+    display: none;
+  }
+}
+
+
+// tablet
+@media (min-width: @tablet-width) {
+  .hotel-offers__title {
+    .font-settings(700; 30px; 26px);
+    margin-bottom: 32px;
+  }
+
+  .hotel-offers__text {
+    max-width: 435px;
+    margin-bottom: 41px;
+  }
+
+  .hotel-offers {
+    padding: 60px 20% 58px 20%;
+  }
+}
+
+//desktop
+@media (min-width: @desktop-width) {
+  .hotel-offers {
+    padding-top: 60px;
+    padding-bottom: 66px;
+  }
+
+  .hotel-offers__text {
+    margin-bottom: 46px;
+  }
 }

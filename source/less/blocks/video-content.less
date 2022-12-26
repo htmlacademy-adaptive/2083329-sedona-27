@@ -1,13 +1,82 @@
+// mobail
 .video-content {
+  padding: 16px 20px 0 20px;
   margin: 0 auto;
+}
 
-  @media (min-width: @desktop-width) {
-    margin-left: 199px;
-    margin-right: 201px;
-  }
+.video-content__header {
+  padding-bottom: 40px;
 }
 
 .video-content__image {
   width: 100%;
   height: auto;
+  display: block;
+}
+
+.video-content__slogan {
+  .reset-style;
+  max-width: 266px;
+  margin: 0 auto;
+  color: @lightblack;
+}
+
+.video-content__title {
+  .reset-style;
+  .font-settings(700; 18px; 26px);
+  margin-bottom: 26px;
+}
+
+.video-content__wrapper {
+  position: relative;
+}
+
+.video-content__play-icon {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 48px;
+  height: 54px;
+  cursor: pointer;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+
+// tablet
+@media (min-width: @tablet-width) {
+  .video-content {
+    padding: 36px 60px 46px 60px;
+  }
+
+  .video-content__slogan {
+    max-width: 445px;
+  }
+
+  .video-content__title {
+    font-size: 30px;
+    margin-bottom: 32px;
+  }
+
+  .video-content__header {
+    padding-bottom: 89px;
+  }
+}
+
+// desktop
+@media (min-width: @desktop-width) {
+  .video-content {
+    padding: 40px 201px 76px 199px;
+  }
+
+  .video-content__header {
+    padding-bottom: 87px;
+  }
 }

@@ -1,3 +1,37 @@
-// .copyright {
+.copyright__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: @black;
+  padding-bottom: 3px;
+  // padding: 10px;
 
+  &:hover,
+  &:focus {
+    color: @blue;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
+}
+
+.copyright__text {
+  padding-right: 12px;
+}
+
+.copyright__link:hover path {
+  fill: #81b3d2;
+}
+
+.copyright__link:active path {
+  fill: #b3b3b3;
+}
+
+// // tablet
+// @media (min-width: @tablet-width) {
+//   .copyright__link {
+//     margin-left: auto;
+//   }
 // }

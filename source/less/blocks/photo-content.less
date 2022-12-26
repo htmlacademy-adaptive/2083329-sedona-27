@@ -1,8 +1,34 @@
+// mobail
 .photo-content__list {
   .reset-list-style;
+}
 
-  @media (min-width: @tablet-width) {
+// only mobail
+@media (max-width: @mobile-width-only) {
+  .photo-content__item {
+    border-top: 1px solid #e5e5e5;
+
+    &:last-child {
+      border-bottom: 1px solid #e5e5e5;
+    }
+  }
+}
+
+// tablet
+@media (min-width: @tablet-width) {
+  .photo-content {
+    padding: 24px 60px 20px 60px;
+  }
+
+  .photo-content__list {
     display: flex;
     flex-wrap: wrap;
+  }
+}
+
+//desktop
+@media (min-width: @desktop-width) {
+  .photo-content {
+    padding: 23px 0 20px 0;
   }
 }
