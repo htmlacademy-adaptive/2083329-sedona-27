@@ -30,6 +30,12 @@
     width: 460px;
     height: 80px;
   }
+
+  @media (min-resolution: 2dppx) {
+    .main-inner__image-wrapper {
+      background-image: url("../img/back-inner-tablet@2x.jpg");
+    }
+  }
 }
 
 //desktop
@@ -37,5 +43,11 @@
   .main-inner__image-wrapper {
     padding: 101px 65px 114px 61px;
     background-image: url("../img/back-inner-desktop.jpg");
+  }
+
+  @media (min-resolution: 2dppx) {
+    .main-inner__image-wrapper {
+      background-image: url("../img/back-inner-desktop@2x.jpg");
+    }
   }
 }

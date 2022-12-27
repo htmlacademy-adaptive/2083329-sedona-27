@@ -22,6 +22,12 @@
   margin: 0 auto;
 }
 
+@media (min-resolution: 2dppx) {
+  .main-container__image-wrapper {
+    background-image: url("../img/back-mobile@2x.jpg");
+  }
+}
+
 // tablet
 @media (min-width: @tablet-width) {
   .main-container__image-wrapper {
@@ -34,11 +40,23 @@
     width: 461px;
     height: 350px;
   }
+
+  @media (min-resolution: 2dppx) {
+    .main-container__image-wrapper {
+      background-image: url("../img/back-tablet@2x.jpg");
+    }
+  }
 }
 
 //desktop
 @media (min-width: @desktop-width) {
   .main-container__image-wrapper {
     background-image: url("../img/back-desktop.jpg");
+  }
+
+  @media (min-resolution: 2dppx) {
+    .main-container__image-wrapper {
+      background-image: url("../img/back-desktop@2x.jpg");
+    }
   }
 }
