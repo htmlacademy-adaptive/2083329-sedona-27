@@ -12,11 +12,6 @@
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 
-
-
-
-</svg>
-
 <body class="page__body">
   <div class="page__container">
     <header class="main-header main-header--nojs">
@@ -47,7 +42,6 @@
     <main class="main-container">
 
       <h1 class="visually-hidden">Сайт города Седона</h1>
-
       <section class="main-container__intro">
         <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
         <div class="main-container__image-wrapper">
@@ -73,6 +67,11 @@
               </div>
               <div class="advantages__image-wrapper">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1280px)"
+                    srcset="img/photo-city-desktop.webp 1x, img/photo-city-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/photo-city-tablet.webp 1x, img/photo-city-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-city.webp 1x, img/photo-city@2x.webp 2x">
                   <source media="(min-width: 1280px)"
                     srcset="img/photo-city-desktop.jpg 1x, img/photo-city-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)"
@@ -108,6 +107,11 @@
               </div>
               <div class="advantages__image-wrapper">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1280px)"
+                    srcset="img/photo-bridge-desktop.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/photo-bridge-tablet.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-bridge.webp 1x, img/photo-bridge@2x.webp 2x">
                   <source media="(min-width: 1280px)"
                     srcset="img/photo-bridge-desktop.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)"
@@ -116,7 +120,6 @@
                     width="320" height="260" alt="Фото моста дьявола.">
                 </picture>
               </div>
-
             </div>
           </li>
 
@@ -155,16 +158,6 @@
           width="100%" height="350" style="border: 0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
-        <!-- <div class="location__image-wrapper">
-          <picture>
-            <source media="(min-width: 1280px)"
-              srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)"
-              srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
-            <img class="location__image" src="img/map-mobile.jpg" width="320" height="350" srcset="img/map-mobile@2x.jpg 2x"
-              alt="Изображение карты.">
-          </picture>
-        </div> -->
       </section>
     </main>
 
