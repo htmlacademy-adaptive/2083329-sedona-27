@@ -55,6 +55,12 @@
   }
 }
 
+@media (max-width: @mobile-width-only) {
+  .advantages-sublist__item br {
+    display: none;
+  }
+}
+
 // tablet
 @media (min-width: @tablet-width) {
   .advantages-sublist {
@@ -65,15 +71,19 @@
   }
 
   .advantages-sublist__item {
-    .vertical-flex;
+    display: flex;
+    flex-direction: column;
     width: calc(100% / 3);
     box-sizing: border-box;
     text-align: center;
     margin-bottom: 0;
     min-height: 331px;
-    padding: 118px 20px 20px 20px;
+    padding: 58px 20px 20px 20px;
 
     &::before {
+      margin: 0 auto;
+      width: 77px;
+      height: 75px;
       left: 50%;
       top: 57px;
       transform: translateX(-50%);
@@ -89,8 +99,8 @@
 
   .advantages-sublist__item--food {
     &::before {
-      width: 81px;
-      height: 68px;
+      width: 79px;
+      height: 77px;
     }
   }
 
@@ -98,16 +108,18 @@
     &::before {
       width: 67px;
       height: 75px;
+      top: 63px;
     }
   }
 
   .advantages-sublist__title {
     .font-settings(700; 21px; 26px);
     margin-bottom: 22px;
+    padding-top: 100px;
   }
 
   .advantages-sublist__text {
-    max-width: 190px;
+    max-width: 175px;
     margin: 0 auto;
   }
 }

@@ -1,10 +1,4 @@
 // mobail
-.input-radio {
-  &:not(:last-child) {
-    margin-bottom: 18px;
-  }
-}
-
 .input-radio__label {
   .font-settings(700; 18px; 26px);
   min-height: 45px;
@@ -44,17 +38,21 @@
   display: block;
 }
 
-// tablet
-@media (min-width: @tablet-width) {
+// only mobail
+@media (max-width: @mobile-width-only) {
   .input-radio {
-    width: 50%;
-    box-sizing: border-box;
-    padding-left: 35px;
-
-    &:nth-child(2n) {
-      padding-left: 7px;
+    &:not(:last-child) {
+      margin-bottom: 18px;
     }
   }
+}
+
+// tablet
+@media (min-width: @tablet-width) {
+  // .input-radio {
+  //   box-sizing: border-box;
+  //   margin-bottom: 0;
+  // }
 }
 
 // desktop
