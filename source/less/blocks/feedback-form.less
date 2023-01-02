@@ -1,6 +1,7 @@
 // mobail
 .feedback-form {
   width: 100%;
+  margin-bottom: 5px;
 }
 
 .feedback-form__button {
@@ -87,14 +88,30 @@
     box-sizing: border-box;
   }
 
-  .feedback-form__list {
+  .feedback-form__list--text {
     display: flex;
     flex-wrap: wrap;
   }
 
+  .feedback-form__list--radio,
+  .feedback-form__list--checkbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 17px;
+  }
+
+  .feedback-form__list--radio {
+    padding: 2px 39px 0 36px;
+    margin-bottom: 22px;
+  }
+
+  .feedback-form__list--checkbox {
+    padding: 1px 14px 0 2px;
+    margin-bottom: 14px;
+  }
+
   .feedback-form__group {
     padding: 0;
-    margin-bottom: 25px;
     box-sizing: border-box;
     width: 50%;
     border: none;
@@ -111,7 +128,7 @@
 
   .feedback-form__group--name {
     border-right: 1px solid #dbdbdb;
-    margin-bottom: 23px;
+    margin-bottom: 20px;
   }
 
   .feedback-form__group--name .feedback-form__item {
@@ -124,8 +141,8 @@
 
   .feedback-form__title {
     .font-settings(700; 21px; 26px);
-    padding-bottom: 25px;
-    //max-width: 400px;
+    padding-bottom: 27px;
+    padding-top: 27px;
   }
 
   .feedback-form__title--with-decor {
@@ -171,7 +188,45 @@
 // desktop
 @media (min-width: @desktop-width) {
   .feedback-form {
-    padding-left: 120px;
-    padding-right: 120px;
+    padding: 23px 120px 0 120px;
+  }
+
+  .feedback-form__list--checkbox {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 29px 17px 34px 44px;
+    gap: 45px;
+    margin: 0;
+  }
+
+  .feedback-form__list--radio {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px 39px 0 53px;
+    gap: 57px;
+  }
+
+  .feedback-form__group--name {
+    margin-bottom: 29px;
+    width: 493px;
+  }
+
+  .feedback-form__group--contact {
+    width: 467px;
+  }
+
+  .feedback-form__group {
+    margin-bottom: 27px;
+  }
+
+  .feedback-form__wrapper {
+    padding: 0;
+  }
+
+  .feedback-form__button-wrapper {
+    padding-top: 16px;
+  }
+
+  .feedback-form__button {
+    width: 384px;
+    max-width: none;
   }
 }

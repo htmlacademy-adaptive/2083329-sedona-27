@@ -1,13 +1,8 @@
 .social__list {
   .reset-list-style;
-  display: flex;
-  justify-content: center;
-}
-
-.social__item {
-  &:not(:last-child) {
-    margin-right: 6px;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
 }
 
 .social__link {

@@ -1,9 +1,3 @@
-.input-checkbox {
-  &:not(:last-child) {
-    margin-bottom: 15px;
-  }
-}
-
 .input-checkbox__label {
   .font-settings(700; 18px; 26px);
   padding-left: 63px;
@@ -40,16 +34,25 @@
   display: block;
 }
 
+// only mobail
+@media (max-width: @mobile-width-only) {
+  .input-checkbox {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}
+
 // tablet
 @media (min-width: @tablet-width) {
-  .input-checkbox {
-    width: 50%;
-  }
+  // .input-checkbox {
+  //   width: 50%;
+  // }
 }
 
 // desktop
 @media (min-width: @desktop-width) {
-  .input-checkbox {
-    width: 25%;
-  }
+  // .input-checkbox {
+  //   width: 25%;
+  // }
 }

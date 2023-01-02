@@ -1,6 +1,6 @@
 // mobail
 .video-content {
-  padding: 16px 20px 0 20px;
+  padding: 17px 20px 0 20px;
   margin: 0 auto;
 }
 
@@ -31,7 +31,9 @@
   position: relative;
 }
 
-.video-content__play-icon {
+.video-content__button {
+  width: 48px;
+  height: 54px;
   position: absolute;
   z-index: 3;
   top: 0;
@@ -39,21 +41,20 @@
   bottom: 0;
   left: 0;
   margin: auto;
-  width: 48px;
-  height: 54px;
   cursor: pointer;
   opacity: 0.7;
+  border: none;
+  background: url("../img/icon-play.svg") no-repeat 50% 50%;
 
   &:hover {
     opacity: 1;
   }
 }
 
-
 // tablet
 @media (min-width: @tablet-width) {
   .video-content {
-    padding: 36px 60px 46px 60px;
+    padding: 36px 60px 52px 60px;
   }
 
   .video-content__slogan {
@@ -73,7 +74,7 @@
 // desktop
 @media (min-width: @desktop-width) {
   .video-content {
-    padding: 40px 201px 76px 199px;
+    padding: 40px 201px 96px 199px;
   }
 
   .video-content__header {
