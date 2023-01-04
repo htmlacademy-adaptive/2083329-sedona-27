@@ -34,6 +34,10 @@
   display: block;
 }
 
+.input-checkbox {
+  box-sizing: border-box;
+}
+
 // only mobail
 @media (max-width: @mobile-width-only) {
   .input-checkbox {
@@ -45,14 +49,14 @@
 
 // tablet
 @media (min-width: @tablet-width) {
-  // .input-checkbox {
-  //   width: 50%;
-  // }
+  .input-checkbox {
+    padding-right: 48px;
+  }
 }
 
-// desktop
+// // desktop
 @media (min-width: @desktop-width) {
-  // .input-checkbox {
-  //   width: 25%;
-  // }
+  .input-checkbox {
+    padding-right: 0;
+  }
 }
