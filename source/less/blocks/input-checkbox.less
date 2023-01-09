@@ -16,11 +16,12 @@
     display: block;
     top: 0;
     left: 0;
-    background: @lightgray;
+    background: #f2f2f2;
   }
 
   &::after {
-    content: url("../img/tick.svg");
+    content: "";
+    background: url("../img/tick.svg") no-repeat center;
     width: 22px;
     height: 16px;
     position: absolute;
@@ -28,10 +29,29 @@
     left: 12px;
     display: none;
   }
+
+  &:hover::before {
+    background-color: #e5e5e5;
+  }
+
+  &:active::before,
+  &:focus::before {
+    background-color: #d5d5d5;
+  }
+
+  &:active::after,
+  &:focus::before {
+    background-color: #d5d5d5;
+    opacity: 0.7;
+  }
 }
 
 .input-checkbox__input:checked + .input-checkbox__label::after {
   display: block;
+}
+
+.input-checkbox {
+  box-sizing: border-box;
 }
 
 // only mobail
@@ -45,14 +65,14 @@
 
 // tablet
 @media (min-width: @tablet-width) {
-  // .input-checkbox {
-  //   width: 50%;
-  // }
+  .input-checkbox {
+    padding-right: 48px;
+  }
 }
 
 // desktop
 @media (min-width: @desktop-width) {
-  // .input-checkbox {
-  //   width: 25%;
-  // }
+  .input-checkbox {
+    padding-right: 0;
+  }
 }
