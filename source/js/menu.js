@@ -13,3 +13,4 @@ toggleButtonElement.addEventListener('click', () => {
     mainNavElement.classList.remove('main-nav--opened');
   }
 });
+

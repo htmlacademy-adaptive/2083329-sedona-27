@@ -3,7 +3,7 @@
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.4.0",
-    "browser-sync": "2.27.7",
+    "browser-sync": "^2.27.11",
     "del": "6.0.0",
     "gulp": "4.0.2",
     "gulp-less": "5.0.0",
@@ -43,7 +43,7 @@
     "source/less/**/*.less"
   ],
   "engines": {
-    "node": "16.13.0"
+    "node": "^16"
   },
   "type": "module"
 }

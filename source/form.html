@@ -3,8 +3,13 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="preload" href="fonts/ptsans.woff" as="font">
   <link rel="preload" href="fonts/ptsans.woff2" as="font">
   <link rel="preload" href="fonts/ptsansbold.woff" as="font">
@@ -57,7 +62,7 @@
             посещенных вами достопримечательностях</p>
         </header>
 
-        <form class="feedback-form">
+        <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="feedback-form__group feedback-form__group--name">
             <legend class="feedback-form__title">Представьтесь:</legend>
             <ul class="feedback-form__list feedback-form__list--text">
@@ -84,12 +89,12 @@
             <ul class="feedback-form__list feedback-form__list--text">
               <li class="feedback-form__item input-text">
                 <label class="input-text__label" for="phone">Контактный телефон*:</label>
-                <input class="input-text__input input-text__input--phone" type="text" id="phone" name="phone"
+                <input class="input-text__input input-text__input--phone" type="tel" id="phone" name="phone"
                   placeholder="Введите телефон" required>
               </li>
               <li class="feedback-form__item input-text">
                 <label class="input-text__label" for="email">Электронная почта*:</label>
-                <input class="input-text__input input-text__input--email" type="text" id="email" name="email"
+                <input class="input-text__input input-text__input--email" type="email" id="email" name="email"
                   placeholder="Введите e-mail" required>
               </li>
             </ul>
@@ -199,27 +204,34 @@
       </div>
     </footer>
 
-    <!-- Модальное сообщение с ошибкой при отправке отзыва
-    <section class="modal">
-      <div class="modal__wrapper">
-        <h2 class="modal__title">Что-то пошло не так!</h2>
+    <!-- Модальное сообщение с ошибкой при отправке отзыва-->
+    <div class="modal-container modal-container--error">
+      <div class="modal modal--error">
+        <h2 class="modal__title modal__title--error">Что-то пошло не так!</h2>
         <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
         </p>
-        <button class="modal__button--error button" type="button">Ок</button>
+        <button class="modal__button modal__button--error button" type="button">Ок</button>
       </div>
-    </section>
+    </div>
 
-    Модальное сообщение об успешной отправке отзыва
-    <section class="modal">
-      <div class="modal__wrapper">
-        <h2 class="modal__title">Ваш отзыв отправлен!</h2>
-        <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время
-          мы опубликуем его на сайте</p>
-        <button class="modal__button--success button" type="button">Закрыть окно</button>
+    <!-- Модальное сообщение об успешной отправке отзыва -->
+    <section class="modal-container modal-container--success">
+      <div class="modal modal--success">
+        <div class="modal__wrapper-text">
+          <h2 class="modal__title">Ваш отзыв отправлен!</h2>
+          <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. <br>В ближайшее время
+            мы опубликуем его на сайте</p>
+        </div>
+        <div class="modal__wrapper-button">
+          <button class="modal__button modal__button--success button" type="button">Закрыть окно</button>
+        </div>
       </div>
     </section>
-  </div> -->
-    <script src="js/script.js" type="module"></script>
+  </div>
+
+  <script src="js/menu.js"></script>
+  <script src="js/submit-form.js"></script>
+
 </body>
 
 </html>
