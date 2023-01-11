@@ -6,7 +6,6 @@
 
 .feedback-form__button {
   width: 100%;
-  max-width: 324px;
   padding-top: 17px;
   padding-bottom: 15px;
   margin: 0 auto;
@@ -69,8 +68,42 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 47px 60px 0 60px;
+    padding: 73px 61px 0 60px;
     box-sizing: border-box;
+  }
+
+  .feedback-form__container {
+    padding: 0;
+    margin-bottom: 48px;
+    box-sizing: border-box;
+    width: 50%;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:nth-child(n+3) {
+      width: 100%;
+    }
+  }
+
+  .feedback-form__group {
+    width: 100%;
+  }
+
+  .feedback-form__container--contact {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 1px;
+      height: 100%;
+      background-color: #dbdbdb;
+      left: 0;
+      top: 0;
+    }
   }
 
   .feedback-form__list--text {
@@ -86,49 +119,26 @@
   }
 
   .feedback-form__list--radio {
-    padding-top: 2px;
-    margin-bottom: 22px;
+    padding-left: 36px;
+    padding-right: 37px;
   }
 
   .feedback-form__list--checkbox {
-    margin-bottom: 14px;
+    padding-left: 84px;
+    padding-right: 69px;
   }
 
-  .feedback-form__group {
-    padding: 0;
-    box-sizing: border-box;
-    width: 50%;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    &:nth-child(n+3) {
-      width: 100%;
-    }
-  }
-
-  .feedback-form__group--name {
-    position: relative;
-    margin-bottom: 20px;
-
-    &::after {
-      content: "";
-      width: 1px;
-      height: 339px;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      background-color: #dbdbdb;
-    }
-  }
-
-  .feedback-form__group--name .feedback-form__item {
+  .feedback-form__container--name .feedback-form__item {
     padding-right: 43px;
   }
 
-  .feedback-form__group--contact .feedback-form__item {
+  .feedback-form__container--contact .feedback-form__item {
     padding-left: 44px;
+  }
+
+  .feedback-form__container--sight,
+  .feedback-form__container--emotions {
+    margin-bottom: 41px;
   }
 
   .feedback-form__title {
@@ -154,18 +164,16 @@
   }
 
   .feedback-form__title-text {
-    padding-left: 61px;
-    padding-right: 61px;
+    width: 402px;
     background-color: #ffffff;
     display: inline-block;
     z-index: 10;
     position: relative;
-    max-width: 402px;
   }
 
   .feedback-form__button-wrapper {
     margin: 0 auto;
-    padding: 43px 0 70px 0;
+    padding: 0 0 70px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -173,6 +181,7 @@
 
   .feedback-form__button {
     margin: 0;
+    width: 50%;
   }
 
   .feedback-form__text {
@@ -200,12 +209,12 @@
     gap: 57px;
   }
 
-  .feedback-form__group--name {
+  .feedback-form__container--name {
     margin-bottom: 29px;
     width: 51%;
   }
 
-  .feedback-form__group--contact {
+  .feedback-form__container--contact {
     width: 49%;
   }
 
@@ -222,15 +231,11 @@
     max-width: none;
   }
 
-  // .feedback-form__title--with-decor {
-  //   max-width: 400px;
-  // }
-
-  .feedback-form__group--name .feedback-form__item {
+  .feedback-form__container--name .feedback-form__item {
     padding-right: 60px;
   }
 
-  .feedback-form__group--contact .feedback-form__item {
+  .feedback-form__container--contact .feedback-form__item {
     padding-left: 69px;
     padding-right: 0;
   }
