@@ -60,4 +60,3 @@ feedbackFormElement.addEventListener('submit', (evt) => {
     showErrorMessage();
   }
 });
-

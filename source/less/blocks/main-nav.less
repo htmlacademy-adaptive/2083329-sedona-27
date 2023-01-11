@@ -52,12 +52,18 @@
   }
 
   .main-nav__item {
+    width: 100%;
+
     &:not(:last-child) {
       border-bottom: 1px solid #668bab;
     }
 
     &:not(:first-child) {
       border-top: 1px solid #98bfde;
+    }
+
+    &:last-child {
+      box-shadow: inset 0 -3px 4px rgb(1 1 1 / 20%);
     }
 
     &:hover,
@@ -88,18 +94,6 @@
 
   .main-nav--nojs .main-nav__item {
     display: block;
-  }
-
-  .main-nav--opened .main-nav__list::after,
-  .main-nav--nojs .main-nav__list::after {
-    content: "";
-    position: absolute;
-    top: 215px;
-    left: 0;
-    z-index: 10;
-    height: 7px;
-    width: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
   }
 }
 
