@@ -193,19 +193,22 @@
 // desktop
 @media (min-width: @desktop-width) {
   .feedback-form {
-    padding: 23px 120px 0 120px;
+    padding: 48px 120px 0 121px;
+  }
+
+  .feedback-form__title {
+    margin-bottom: 26px;
   }
 
   .feedback-form__list--checkbox {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 29px 44px 34px 44px;
-    gap: 45px;
-    margin: 0;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 34px 31px 20px 23px;
+    box-sizing: border-box;
   }
 
   .feedback-form__list--radio {
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 20px 39px 0 53px;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px 39px 20px 53px;
     gap: 57px;
   }
 
@@ -218,8 +221,8 @@
     width: 49%;
   }
 
-  .feedback-form__group {
-    margin-bottom: 27px;
+  .feedback-form__container {
+    margin-bottom: 55px;
   }
 
   .feedback-form__button-wrapper {
@@ -238,5 +241,9 @@
   .feedback-form__container--contact .feedback-form__item {
     padding-left: 69px;
     padding-right: 0;
+  }
+
+  .feedback-form__container--emotions {
+    margin-bottom: 27px;
   }
 }
