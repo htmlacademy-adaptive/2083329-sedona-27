@@ -37,20 +37,22 @@
     background-color: #e5e5e5;
   }
 
-  &:active::before,
-  &:focus::before {
+  &:active::before {
     background-color: #d5d5d5;
   }
 
-  &:active::after,
-  &:focus::before {
-    background-color: #d5d5d5;
-    opacity: 0.7;
+  &:active::after {
+    opacity: 0.3;
   }
 }
 
 .input-checkbox__input:checked + .input-checkbox__label::after {
   display: block;
+}
+
+.input-checkbox__input:focus-visible ~ .input-checkbox__label::before {
+  box-shadow: inset 0 0 4px 1px #d5d5d5;
+  outline: 2px solid #d5d5d5;
 }
 
 // only mobail
@@ -61,13 +63,6 @@
     }
   }
 }
-
-// tablet
-// @media (min-width: @tablet-width) {
-//   .input-checkbox {
-//     padding-right: 48px;
-//   }
-// }
 
 //desktop
 @media (min-width: @desktop-width) {
