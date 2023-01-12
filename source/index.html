@@ -93,11 +93,12 @@
               </li>
               <li class="advantages-sublist__item advantages-sublist__item--food">
                 <h4 class="advantages-sublist__title">Еда</h4>
-                <p class="advantages-sublist__text">Всегда заказывайте фирменный бургер, <br> вы не разочаруетесь!</p>
+                <p class="advantages-sublist__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
               <li class="advantages-sublist__item advantages-sublist__item--gifts">
                 <h4 class="advantages-sublist__title">Сувениры</h4>
-                <p class="advantages-sublist__text">Не только китайского, <br> но и местного производства!</p>
+                <p class="advantages-sublist__text">Не только китайского, <span class="text-wrap-desktop"></span> но и
+                  местного производства!</p>
               </li>
             </ul>
           </li>
@@ -162,7 +163,15 @@
           width="320" height="350" style="border: 0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
-      </section>
+        <picture>
+          <source type="image/webp" media="(min-width: 1200px)" srcset="img/map-desktop.webp 1x, img/map-desctop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/index/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+          <source media="(min-width: 1200px)" srcset="img/map-desctop.jpg 1x, img/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
+          <img class="location__image" src="img/map-mobile.jpg" srcset="img/index/map-mobile@2x.jpg 2x" width="320" height="350" loading="lazy" alt="Карта местоположения Седоны">
+        </picture>
+    </section>
     </main>
 
     <footer class="main-footer">
