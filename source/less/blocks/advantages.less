@@ -1,4 +1,4 @@
-// mobail
+// mobile
 .advantages__header {
   padding: 32px 18px 37px 18px;
 }
@@ -39,7 +39,10 @@
 }
 
 .advantages__text-wrapper {
-  .vertical-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 18px 18px 18px 18px;
   box-sizing: border-box;
   min-height: 191px;
@@ -78,7 +81,7 @@
   flex-direction: row-reverse;
 }
 
-// only mobail
+// only mobile
 @media (max-width: @mobile-width-only) {
   .advantages__header {
     position: relative;
@@ -151,7 +154,10 @@
   }
 
   .advantages__item--simple {
-    .vertical-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 41px 33px;
     min-height: 256px;
   }

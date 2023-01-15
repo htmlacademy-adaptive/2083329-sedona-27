@@ -51,14 +51,16 @@
       <section class="main-inner__intro">
         <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
         <div class="main-inner__image-wrapper">
-          <img class="main-inner__image" src="img/intro-text-inner.svg" width="229" height="39" alt="Добро пожаловать в Седону">
+          <img class="main-inner__image" src="img/intro-text-inner.svg" width="229" height="39"
+            alt="Добро пожаловать в Седону">
         </div>
       </section>
 
       <section class="catalog">
         <header class="catalog__header">
           <h2 class="catalog__title">Фото и видео</h2>
-          <p class="catalog__slogan">Не можете решиться на путешествие из-за курса?<br> Фотографии помогут вам забыть
+          <p class="catalog__slogan">Не можете решиться на путешествие из-за курса?<span class="text-wrap"></span>
+            Фотографии помогут вам забыть
             о политике и экономике.</p>
         </header>
 
@@ -67,7 +69,12 @@
             <li class="photo-content__item photo">
               <a class="photo__link" href="#">
                 <picture>
-                  <source media="(min-width: 1280px)" srcset="img/road-desktop.jpg 1x, img/road-desktop@2x.jpg 2x">
+                  <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="img/road-desktop.webp 1x, img/road-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/road-tablet.webp 1x, img/road-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/road.webp 1x, img/road@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/road-desktop.jpg 1x, img/road-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/road-tablet.jpg 1x, img/road-tablet@2x.jpg 2x">
                   <img class="photo__image" width="280" height="280" src="img/road.jpg" srcset="img/road@2x.jpg 2x"
                     alt="Фото дороги на закате.">
@@ -92,7 +99,12 @@
             <li class="photo-content__item photo">
               <a class="photo__link" href="#">
                 <picture>
-                  <source media="(min-width: 1280px)"
+                  <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="img/vegetation-desktop.webp 1x, img/vegetation-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/vegetation-tablet.webp 1x, img/vegetation-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/vegetation.webp 1x, img/vegetation@2x.webp 2x">
+                  <source media="(min-width: 1200px)"
                     srcset="img/vegetation-desktop.jpg 1x, img/vegetation-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)"
                     srcset="img/vegetation-tablet.jpg 1x, img/vegetation-tablet@2x.jpg 2x">
@@ -119,7 +131,12 @@
             <li class="photo-content__item photo">
               <a class="photo__link" href="#">
                 <picture>
-                  <source media="(min-width: 1280px)"
+                  <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="img/road-in-forest-desktop.webp 1x, img/road-in-forest-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/road-in-forest-tablet.webp 1x, img/road-in-forest-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/road-in-forest.webp 1x, img/road-in-forest@2x.webp 2x">
+                  <source media="(min-width: 1200px)"
                     srcset="img/road-in-forest-desktop.jpg 1x, img/road-in-forest-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)"
                     srcset="img/road-in-forest-tablet.jpg 1x, img/road-in-forest-tablet@2x.jpg 2x">
@@ -146,7 +163,12 @@
             <li class="photo-content__item photo">
               <a class="photo__link" href="#">
                 <picture>
-                  <source media="(min-width: 1280px)"
+                  <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="img/devil-bridge-desktop.webp 1x, img/devil-bridge-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/devil-bridge-tablet.webp 1x, img/devil-bridge-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/devil-bridge.webp 1x, img/devil-bridge@2x.webp 2x">
+                  <source media="(min-width: 1200px)"
                     srcset="img/devil-bridge-desktop.jpg 1x, img/devil-bridge-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)"
                     srcset="img/devil-bridge-tablet.jpg 1x, img/devil-bridge-tablet@2x.jpg 2x">
@@ -181,7 +203,12 @@
           </header>
           <div class="video-content__wrapper">
             <picture>
-              <source media="(min-width: 1280px)"
+              <source type="image/webp" media="(min-width: 1200px)"
+                srcset="img/video-frame-desktop.webp 1x, img/video-frame-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/video-frame-tablet.webp 1x, img/video-frame-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/video-frame.webp 1x, img/video-frame@2x.webp 2x">
+              <source media="(min-width: 1200px)"
                 srcset="img/video-frame-desktop.jpg 1x, img/video-frame-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)"
                 srcset="img/video-frame-tablet.jpg 1x, img/video-frame-tablet@2x.jpg 2x">
@@ -225,7 +252,7 @@
         </a>
       </div>
     </footer>
-    <script src="js/menu.js"></script>
+    <!-- <script src="js/menu.js"></script> -->
   </div>
 </body>
 
