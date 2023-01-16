@@ -1,5 +1,12 @@
+@media (min-width: @mobile-width) {
+  .text-wrap-mobile::before {
+    content: "\A";
+    white-space: pre;
+  }
+}
+
 @media (min-width: @tablet-width) {
-  .text-wrap::before {
+  .text-wrap-tablet::before {
     content: "\A";
     white-space: pre;
   }
