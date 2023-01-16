@@ -3,10 +3,7 @@
   padding: 24px 20px 16px;
   text-align: left;
   box-sizing: border-box;
-
-  &:first-child {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .photo__link {
@@ -93,13 +90,10 @@
   .photo {
     padding: 0;
     text-align: left;
+    width: 50%;
 
-    &:first-child {
+    &--main {
       width: 100%;
-    }
-
-    &:not(:first-child) {
-      width: 50%;
     }
   }
 
@@ -127,37 +121,56 @@
   .photo__like-count {
     padding-top: 5px;
   }
+
+  .photo__image {
+    object-fit: cover;
+    max-height: 267px;
+  }
+
+  .photo--main .photo__image {
+    max-height: 400px;
+  }
 }
 
 // desktop
 @media (min-width: @desktop-width) {
   .photo {
+    width: calc(100% / 3);
     position: relative;
+
+    &--main {
+      width: 100%;
+    }
   }
 
-  .photo:not(:first-child) {
-    width: calc(100% / 3);
+  .photo__title {
+    margin-bottom: 4px;
+  }
 
-    & .photo__info {
-      padding: 18px 20px 16px 25px;
-    }
-
-    & .photo__title {
-      margin-bottom: 4px;
-    }
-
-    & .photo__like-count {
-      padding-top: 3px;
-    }
+  .photo__like-count {
+    padding-top: 6px;
   }
 
   .photo__info {
     position: absolute;
+    padding: 18px 20px 16px 25px;
     bottom: 0;
     left: 0;
     right: 0;
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .photo--main .photo__info {
+    padding: 22px 20px 15px;
+  }
+
+  .photo--main .photo__title {
+    margin-bottom: 1px;
+  }
+
+  .photo--main .photo__like-count {
+    padding-top: 3px;
   }
 
   .photo__autor,

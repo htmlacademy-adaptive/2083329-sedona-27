@@ -35,25 +35,26 @@
     background-repeat: no-repeat;
     background-position: center;
   }
-}
 
-.advantages-sublist__item--housing {
-  &::before {
-    background-image: url("../img/icon-house.svg");
+  &--housing {
+    &::before {
+      background-image: url("../img/icon-house.svg");
+    }
+  }
+
+  &--food {
+    &::before {
+      background-image: url("../img/icon-food.svg");
+    }
+  }
+
+  &--gifts {
+    &::before {
+      background-image: url("../img/icon-gift.svg");
+    }
   }
 }
 
-.advantages-sublist__item--food {
-  &::before {
-    background-image: url("../img/icon-food.svg");
-  }
-}
-
-.advantages-sublist__item--gifts {
-  &::before {
-    background-image: url("../img/icon-gift.svg");
-  }
-}
 
 // only mobile
 @media (max-width: @mobile-width-only) {
@@ -89,28 +90,28 @@
       top: 57px;
       transform: translateX(-50%);
     }
-  }
 
-  .advantages-sublist__item--housing {
-    &::before {
-      width: 72px;
-      height: 77px;
+    &--housing {
+      &::before {
+        width: 72px;
+        height: 77px;
+      }
     }
-  }
 
-  .advantages-sublist__item--food {
-    &::before {
-      width: 79px;
-      height: 77px;
+    &--food {
+      &::before {
+        width: 79px;
+        height: 77px;
+      }
     }
-  }
 
-  .advantages-sublist__item--gifts {
-    &::before {
-      width: 84px;
-      height: 79px;
-      top: 63px;
-      background-size: 84px 79px;
+    &--gifts {
+      &::before {
+        width: 84px;
+        height: 79px;
+        top: 63px;
+        background-size: 84px 79px;
+      }
     }
   }
 
@@ -139,36 +140,36 @@
     &::before {
       top: 69px;
     }
-  }
 
-  .advantages-sublist__text {
-    max-width: 285px;
-  }
-
-  .advantages-sublist__item--housing {
-    &::before {
-      width: 80px;
-      height: 73px;
+    &--housing {
+      &::before {
+        width: 80px;
+        height: 73px;
+      }
     }
-  }
 
-  .advantages-sublist__item--food {
-    &::before {
-      top: 72px;
-      width: 73px;
-      height: 69px;
+    &--food {
+      &::before {
+        top: 72px;
+        width: 73px;
+        height: 69px;
+      }
     }
-  }
 
-  .advantages-sublist__item--gifts {
-    &::before {
-      width: 98px;
-      height: 79px;
-      background-size: 98px 79px;
+    &--gifts {
+      &::before {
+        width: 98px;
+        height: 79px;
+        background-size: 98px 79px;
+      }
     }
   }
 
   .advantages-sublist__item--gifts .advantages-sublist__title {
     padding-top: 101px;
+  }
+
+  .advantages-sublist__text {
+    max-width: 285px;
   }
 }

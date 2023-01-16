@@ -6,7 +6,7 @@
   .font-settings(700; 18px; 26px);
   padding-left: 63px;
   padding-top: 11px;
-  min-height: 46px;
+  min-height: 32px;
   position: relative;
   text-transform: none;
   cursor: pointer;
@@ -59,8 +59,12 @@
 @media (max-width: @mobile-width-only) {
   .input-checkbox {
     &:not(:last-child) {
-      margin-bottom: 16px;
+      margin-bottom: 5px;
     }
+  }
+
+  .input-checkbox__label {
+    min-height: 46px;
   }
 }
 
