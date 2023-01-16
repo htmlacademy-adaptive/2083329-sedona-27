@@ -1,9 +1,8 @@
-// mobail
+// mobile
 .main-container__image-wrapper {
   position: relative;
-  padding-top: 90px;
-  padding-bottom: 79px;
-  background: url("../img/back-mobile.jpg") #dbe9f2 center/cover no-repeat;
+  padding: 80px 20px 69px;
+  background: url("../img/back-mobile.jpg") #dbe9f2 top/cover no-repeat;
   overflow: hidden;
 
   &::after {
@@ -20,6 +19,8 @@
 
 .main-container__image {
   margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 @media (min-resolution: 2dppx) {
@@ -31,14 +32,15 @@
 // tablet
 @media (min-width: @tablet-width) {
   .main-container__image-wrapper {
-    padding-top: 77px;
-    padding-bottom: 85px;
+    padding: 57px 60px 65px;
     background-image: url("../img/back-tablet.jpg");
   }
 
   .main-container__image {
     width: 461px;
     height: 350px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   @media (min-resolution: 2dppx) {
@@ -51,6 +53,7 @@
 //desktop
 @media (min-width: @desktop-width) {
   .main-container__image-wrapper {
+    padding: 57px 150px 65px 150px;
     background-image: url("../img/back-desktop.jpg");
   }
 

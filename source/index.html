@@ -10,15 +10,19 @@
   <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="images/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/ptsans.woff" as="font">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
 </head>
 
 <body class="page__body">
   <div class="page__container">
-    <header class="main-header main-header--nojs">
+    <header class="main-header">
       <a class="main-header__logo" href="index.html">
         <img class="main-header__image" src="img/logo.svg" width="185" height="96" alt="Логотип Седоны.">
       </a>
-      <nav class="main-nav main-nav--closed">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
@@ -67,12 +71,12 @@
               </div>
               <div class="advantages__image-wrapper">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1280px)"
+                  <source type="image/webp" media="(min-width: 1200px)"
                     srcset="img/photo-city-desktop.webp 1x, img/photo-city-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)"
                     srcset="img/photo-city-tablet.webp 1x, img/photo-city-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/photo-city.webp 1x, img/photo-city@2x.webp 2x">
-                  <source media="(min-width: 1280px)"
+                  <source media="(min-width: 1200px)"
                     srcset="img/photo-city-desktop.jpg 1x, img/photo-city-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)"
                     srcset="img/photo-city-tablet.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
@@ -89,11 +93,13 @@
               </li>
               <li class="advantages-sublist__item advantages-sublist__item--food">
                 <h4 class="advantages-sublist__title">Еда</h4>
-                <p class="advantages-sublist__text">Всегда заказывайте фирменный бургер, <br> вы не разочаруетесь!</p>
+                <p class="advantages-sublist__text">Всегда заказывайте фирменный бургер, <span class="text-wrap"></span>
+                  вы не разочаруетесь!</p>
               </li>
               <li class="advantages-sublist__item advantages-sublist__item--gifts">
                 <h4 class="advantages-sublist__title">Сувениры</h4>
-                <p class="advantages-sublist__text">Не только китайского, <br> но и местного производства!</p>
+                <p class="advantages-sublist__text">Не только китайского, <span class="text-wrap-desktop"></span> но и
+                  местного производства!</p>
               </li>
             </ul>
           </li>
@@ -103,16 +109,17 @@
               <div class="advantages__text-wrapper">
                 <h3 class="advantages__title">Там есть мост дьявола</h3>
                 <p class="advantages__number">— №2 —</p>
-                <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+                <p class="advantages__description">Да, по нему можно пройти! <span class="text-wrap-desktop"></span>
+                  Если вы осмелитесь, конечно</p>
               </div>
               <div class="advantages__image-wrapper">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1280px)"
+                  <source type="image/webp" media="(min-width: 1200px)"
                     srcset="img/photo-bridge-desktop.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)"
                     srcset="img/photo-bridge-tablet.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/photo-bridge.webp 1x, img/photo-bridge@2x.webp 2x">
-                  <source media="(min-width: 1280px)"
+                  <source media="(min-width: 1200px)"
                     srcset="img/photo-bridge-desktop.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)"
                     srcset="img/photo-bridge-tablet.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
@@ -123,19 +130,20 @@
             </div>
           </li>
 
-          <li class="advantages__item advantages__item--with-border">
+          <li class="advantages__item advantages__item--simple">
             <h3 class="advantages__title">Небольшая площадь</h3>
             <p class="advantages__number">— №3 —</p>
             <p class="advantages__description">Все интересные места находятся очень близко</p>
           </li>
 
-          <li class="advantages__item advantages__item--with-border">
+          <li class="advantages__item advantages__item--simple">
             <h3 class="advantages__title">Красивая дорога</h3>
             <p class="advantages__number">— №4 —</p>
-            <p class="advantages__description">Eхать в Cедону из Лас-вегаса совсем <br>не скучно!</p>
+            <p class="advantages__description">Eхать в Cедону из Лас-вегаса совсем <span class="text-wrap"></span> не
+              скучно!</p>
           </li>
 
-          <li class="advantages__item advantages__item--with-border">
+          <li class="advantages__item advantages__item--simple">
             <h3 class="advantages__title">Мало туристов</h3>
             <p class="advantages__number">— №5 —</p>
             <p class="advantages__description">Большинство едет в гранд каньон и толпится там</p>
@@ -145,7 +153,8 @@
 
       <section class="hotel-offers">
         <h2 class="hotel-offers__title">Заинтересовались?</h2>
-        <p class="hotel-offers__text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения
+        <p class="hotel-offers__text">Укажите предполагаемые даты поездки, <span class="text-wrap"></span> и мы
+          покажем вам лучшие предложения
           гостиниц в
           седоне</p>
         <a class="hotel-offers__link button" href="#">Найти гостиницу</a>
@@ -158,12 +167,23 @@
           width="320" height="350" style="border: 0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
+        <picture>
+          <source type="image/webp" media="(min-width: 1200px)"
+            srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+          <source media="(min-width: 1200px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
+          <img class="location__image" src="img/map-mobile.jpg" srcset="img/index/map-mobile@2x.jpg 2x" width="320"
+            height="350" alt="Карта местоположения Седоны">
+        </picture>
       </section>
     </main>
 
     <footer class="main-footer">
       <p class="main-footer__hashtag">#VisitSedona</p>
-      <section class="main-footer__social social">
+      <section class="main-footer__social main-footer__social--index social">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social__list">
           <li class="social__item">
@@ -183,7 +203,7 @@
           </li>
         </ul>
       </section>
-      <div class="main-footer__copyright copyright">
+      <div class="main-footer__copyright main-footer__copyright--index copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
           <span class="copyright__text">Разработано</span>
           <svg class="copyright__icon" role="img" width="27" height="34">
@@ -193,7 +213,7 @@
       </div>
     </footer>
   </div>
-  <script src="js/script.js" type="module"></script>
+  <script src="js/menu.js"></script>
 </body>
 
 </html>

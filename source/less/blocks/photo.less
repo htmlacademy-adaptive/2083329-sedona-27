@@ -1,11 +1,18 @@
-// mobail
+// mobile
 .photo {
-  padding: 24px 20px 19px 20px;
+  padding: 24px 20px 16px;
   text-align: left;
   box-sizing: border-box;
+  width: 100%;
+}
 
-  &:first-child {
-    width: 100%;
+.photo__link {
+  cursor: pointer;
+  opacity: 1;
+
+  &:focus-visible {
+    outline: none;
+    opacity: 0.6;
   }
 }
 
@@ -37,13 +44,28 @@
 }
 
 .photo__like-icon {
+  color: #a9a9a9;
+}
+
+.photo__like-button {
+  .reset-style;
   padding-right: 14px;
   padding-bottom: 9px;
+  background-color: transparent;
+  border: 0;
   cursor: pointer;
   opacity: 1;
-  color: #a9a9a9;
 
   &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: none;
     opacity: 0.5;
   }
 }
@@ -68,13 +90,10 @@
   .photo {
     padding: 0;
     text-align: left;
+    width: 50%;
 
-    &:first-child {
+    &--main {
       width: 100%;
-    }
-
-    &:not(:first-child) {
-      width: 50%;
     }
   }
 
@@ -94,32 +113,47 @@
     padding-right: 9px;
     padding-bottom: 9px;
   }
+
+  .photo__like-button {
+    padding: 0;
+  }
+
+  .photo__like-count {
+    padding-top: 5px;
+  }
+
+  .photo__image {
+    object-fit: cover;
+    max-height: 267px;
+  }
+
+  .photo--main .photo__image {
+    max-height: 400px;
+  }
 }
 
 // desktop
 @media (min-width: @desktop-width) {
   .photo {
+    width: calc(100% / 3);
     position: relative;
+
+    &--main {
+      width: 100%;
+    }
   }
 
-  .photo:not(:first-child) {
-    width: calc(100% / 3);
+  .photo__title {
+    margin-bottom: 4px;
+  }
 
-    & .photo__info {
-      padding: 18px 20px 16px 25px;
-    }
-
-    & .photo__title {
-      margin-bottom: 4px;
-    }
-
-    & .photo__like-count {
-      padding-top: 6px;
-    }
+  .photo__like-count {
+    padding-top: 6px;
   }
 
   .photo__info {
     position: absolute;
+    padding: 18px 20px 16px 25px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -127,9 +161,25 @@
     background-color: rgba(0, 0, 0, 0.3);
   }
 
+  .photo--main .photo__info {
+    padding: 22px 20px 15px;
+  }
+
+  .photo--main .photo__title {
+    margin-bottom: 1px;
+  }
+
+  .photo--main .photo__like-count {
+    padding-top: 3px;
+  }
+
   .photo__autor,
   .photo__like,
   .photo__like-icon {
     color: #ffffff;
+  }
+
+  .photo__like-icon {
+    padding-bottom: 5px;
   }
 }

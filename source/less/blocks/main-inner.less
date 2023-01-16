@@ -1,10 +1,10 @@
-// mobail
+// mobile
 .main-inner__image-wrapper {
-  padding: 51px 20px 62px 21px;
+  padding: 42px 22px 51px 21px;
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: url("../img/back-inner.jpg") #805a5a bottom/cover  no-repeat;
+  background: url("../img/back-inner-mobile.jpg") #805a5a bottom/cover  no-repeat;
 
   &::after {
     content: "";
@@ -19,16 +19,30 @@
   }
 }
 
+.main-inner__image {
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media (min-resolution: 2dppx) {
+  .main-inner__image-wrapper {
+    background-image: url("../img/back-inner-mobile@2x.jpg");
+  }
+}
+
 //tablet
 @media (min-width: @tablet-width) {
   .main-inner__image-wrapper {
-    padding: 93px 60px 111px 60px;
+    padding: 74px 60px 90px;
     background-image: url("../img/back-inner-tablet.jpg");
   }
 
   .main-inner__image {
     width: 460px;
     height: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   @media (min-resolution: 2dppx) {
@@ -41,7 +55,7 @@
 //desktop
 @media (min-width: @desktop-width) {
   .main-inner__image-wrapper {
-    padding: 101px 65px 114px 61px;
+    padding: 82px 150px 93px;
     background-image: url("../img/back-inner-desktop.jpg");
   }
 

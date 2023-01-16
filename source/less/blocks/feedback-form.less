@@ -1,4 +1,4 @@
-// mobail
+// mobile
 .feedback-form {
   width: 100%;
   margin-bottom: 5px;
@@ -6,7 +6,6 @@
 
 .feedback-form__button {
   width: 100%;
-  max-width: 324px;
   padding-top: 17px;
   padding-bottom: 15px;
   margin: 0 auto;
@@ -15,24 +14,13 @@
 .feedback-form__title {
   .reset-style;
   .font-settings(700; 18px; 26px);
-  width: 100%;
-  padding-top: 25px;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .feedback-form__group {
   .reset-style;
-  padding: 19px 20px 25px 20px;
   border: none;
-  box-sizing: border-box;
-}
-
-.feedback-form__group--name {
-  padding-bottom: 24px;
-}
-
-.feedback-form__group--contact {
-  padding-bottom: 19px;
 }
 
 .feedback-form__list {
@@ -57,19 +45,19 @@
   .font-settings(400; 12px; 21px);
 }
 
-// mobail only
+// mobile only
 @media (max-width: @mobile-width-only) {
-  .feedback-form__group {
-    position: relative;
+  .feedback-form__container {
+    padding: 24px 20px 23px;
+    border-top: 1px solid #e5e5e5;
+    box-sizing: border-box;
 
-    &::before {
-      content: "";
-      width: 100%;
-      height: 1px;
-      background-color: #e5e5e5;
-      position: absolute;
-      top: -52px;
-      left: 0;
+    &--contact {
+      padding-bottom: 18px;
+    }
+
+    &--sight {
+      padding-bottom: 13px;
     }
   }
 
@@ -84,33 +72,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 47px 60px 0 60px;
+    padding: 73px 61px 0 60px;
     box-sizing: border-box;
   }
 
-  .feedback-form__list--text {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .feedback-form__list--radio,
-  .feedback-form__list--checkbox {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 17px;
-  }
-
-  .feedback-form__list--radio {
-    padding-top: 2px;
-    margin-bottom: 22px;
-  }
-
-  .feedback-form__list--checkbox {
-    margin-bottom: 14px;
-  }
-
-  .feedback-form__group {
+  .feedback-form__container {
     padding: 0;
+    margin-bottom: 48px;
     box-sizing: border-box;
     width: 50%;
     border: none;
@@ -121,62 +89,102 @@
     &:nth-child(n+3) {
       width: 100%;
     }
-  }
 
-  .feedback-form__group--name {
-    position: relative;
-    margin-bottom: 20px;
+    &--contact {
+      position: relative;
 
-    &::after {
-      content: "";
-      width: 1px;
-      height: 339px;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      background-color: #dbdbdb;
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 1px;
+        height: 100%;
+        background-color: #dbdbdb;
+        left: 0;
+        top: 0;
+      }
+    }
+
+    &--sight {
+      margin-bottom: 47px;
+    }
+
+    &--emotions {
+      margin-bottom: 40px;
     }
   }
 
-  .feedback-form__group--name .feedback-form__item {
+  .feedback-form__container--name .feedback-form__item {
     padding-right: 43px;
   }
 
-  .feedback-form__group--contact .feedback-form__item {
+  .feedback-form__container--contact .feedback-form__item {
     padding-left: 44px;
+  }
+
+
+  .feedback-form__group {
+    width: 100%;
+  }
+
+  .feedback-form__list {
+    &--text {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &--radio {
+      padding-left: 36px;
+      padding-right: 37px;
+    }
+
+    &--checkbox {
+      padding-left: 84px;
+      padding-right: 69px;
+    }
+
+    &--radio,
+    &--checkbox {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 17px;
+    }
   }
 
   .feedback-form__title {
     .font-settings(700; 21px; 26px);
-    padding-bottom: 27px;
-    padding-top: 27px;
+    margin-bottom: 29px;
+
+    &--with-decor {
+      position: relative;
+      display: block;
+      width: 100%;
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        border-top: 1px solid #dbdbdb;
+        z-index: 1;
+      }
+    }
   }
 
-  .feedback-form__title--with-decor {
+
+  .feedback-form__title-text {
+    width: 402px;
+    background-color: #ffffff;
+    display: inline-block;
+    z-index: 10;
     position: relative;
-
-    &::after,
-    &::before {
-      content: "";
-      position: absolute;
-      height: 1px;
-      background-color: #dbdbdb;
-      top: 50%;
-      width: 19%;
-    }
-
-    &::before {
-      left: 0;
-    }
-
-    &::after {
-      right: 0;
-    }
   }
 
   .feedback-form__button-wrapper {
     margin: 0 auto;
-    padding: 43px 0 70px 0;
+    padding: 0 0 70px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -184,6 +192,7 @@
 
   .feedback-form__button {
     margin: 0;
+    width: 50%;
   }
 
   .feedback-form__text {
@@ -195,33 +204,59 @@
 // desktop
 @media (min-width: @desktop-width) {
   .feedback-form {
-    padding: 23px 120px 0 120px;
+    padding: 50px 120px 0 121px;
   }
 
-  .feedback-form__list--checkbox {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 29px 44px 34px 44px;
-    gap: 45px;
-    margin: 0;
+  .feedback-form__title {
+    margin-bottom: 26px;
   }
 
-  .feedback-form__list--radio {
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 20px 39px 0 53px;
-    gap: 57px;
+  .feedback-form__list {
+    &--checkbox {
+      grid-template-columns: repeat(4, 1fr);
+      padding: 34px 31px 20px 23px;
+      box-sizing: border-box;
+    }
+
+    &--radio {
+      grid-template-columns: repeat(3, 1fr);
+      padding: 20px 39px 20px 53px;
+      gap: 57px;
+    }
   }
 
-  .feedback-form__group--name {
-    margin-bottom: 29px;
-    width: 51%;
+  .feedback-form__container {
+    margin-bottom: 55px;
+
+    &--name {
+      margin-bottom: 56px;
+      width: 51%;
+    }
+
+    &--contact {
+      width: 49%;
+
+      &::before {
+        left: 3px;
+      }
+    }
+
+    &--emotions {
+      margin-bottom: 27px;
+    }
+
+    &--sight {
+      margin-bottom: 69px;
+    }
   }
 
-  .feedback-form__group--contact {
-    width: 49%;
+  .feedback-form__container--name .feedback-form__item {
+    padding-right: 60px;
   }
 
-  .feedback-form__group {
-    margin-bottom: 27px;
+  .feedback-form__container--contact .feedback-form__item {
+    padding-left: 69px;
+    padding-right: 0;
   }
 
   .feedback-form__button-wrapper {
@@ -232,22 +267,4 @@
     width: 384px;
     max-width: none;
   }
-
-  .feedback-form__group--name .feedback-form__item {
-    padding-right: 60px;
-  }
-
-  .feedback-form__group--contact .feedback-form__item {
-    padding-left: 69px;
-    padding-right: 0;
-  }
-
-  .feedback-form__title--with-decor::before,
-  .feedback-form__title--with-decor::after {
-    width: 280px;
-  }
-
-  // .feedback-form__group--name .feedback-form__item {
-  //   padding-left: 68px;
-  // }
 }

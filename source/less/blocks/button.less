@@ -9,13 +9,21 @@
   opacity: 1;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: #669ec0;
   }
 
   &:active {
     background-color: #5496bd;
     color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 4px 1px #333333;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
   }
 }
